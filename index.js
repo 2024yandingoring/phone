@@ -38,36 +38,3 @@ btn_ifa.onclick = function(){
 // 第三层盒子 内置浏览器 end
 
 
-
-var img = document.querySelector(".four_box_img");
-var scale = 1;
- 
-img.addEventListener('click', function() {
-  scale += 0.25; // 增加或减少这个值可以调整放大的倍数
-  img.style.transform = 'scale(' + scale + ')'; // 应用缩放
-});
- 
-img.addEventListener('dblclick', function() {
-  scale -= 0.25;
-  img.style.transform = 'scale(' + scale + ')'; // 应用缩放
-});
- 
-var pos = { x: 0, y: 0 };
-var dragging = false;
- 
-img.addEventListener('mousedown', function(e) {
-  dragging = true;
-  pos.x = e.clientX - parseInt(img.style.left || 0);
-  pos.y = e.clientY - parseInt(img.style.top || 0);
-});
- 
-document.addEventListener('mousemove', function(e) {
-  if (dragging) {
-    img.style.left = (e.clientX - pos.x) + 'px';
-    img.style.top = (e.clientY - pos.y) + 'px';
-  }
-});
- 
-document.addEventListener('mouseup', function() {
-  dragging = false;
-});
