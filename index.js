@@ -39,31 +39,35 @@ btn_ifa.onclick = function(){
 
 
 
-let img = document.querySelector(".four_box_img");
-let container = document.querySelector(".four_box");
-let start = { x: 0, y: 0 };
-let end = { x: 0, y: 0 };
-let scale = 1;
-
-img.addEventListener('touchstart', function(e) {
-  if (e.touches.length === 2) { // 当两指同时触摸时
-    e.preventDefault();
-    start.x = (e.touches[0].pageX + e.touches[1].pageX) / 2;
-    start.y = (e.touches[0].pageY + e.touches[1].pageY) / 2;
+var img = document.querySelector(".four_box_img");
+var scale = 1;
+ 
+img.addEventListener('click', function() {
+  scale += 0.25; // 增加或减少这个值可以调整放大的倍数
+  img.style.transform = 'scale(' + scale + ')'; // 应用缩放
+});
+ 
+img.addEventListener('dblclick', function() {
+  scale -= 0.25;
+  img.style.transform = 'scale(' + scale + ')'; // 应用缩放
+});
+ 
+var pos = { x: 0, y: 0 };
+var dragging = false;
+ 
+img.addEventListener('mousedown', function(e) {
+  dragging = true;
+  pos.x = e.clientX - parseInt(img.style.left || 0);
+  pos.y = e.clientY - parseInt(img.style.top || 0);
+});
+ 
+document.addEventListener('mousemove', function(e) {
+  if (dragging) {
+    img.style.left = (e.clientX - pos.x) + 'px';
+    img.style.top = (e.clientY - pos.y) + 'px';
   }
 });
-
-img.addEventListener('touchmove', function(e) {
-  e.preventDefault();
-  if (e.touches.length === 2) {
-    end.x = (e.touches[0].pageX + e.touches[1].pageX) / 2;
-    end.y = (e.touches[0].pageY + e.touches[1].pageY) / 2;
-    let scaleDelta = (end.x - start.x + end.y - start.y) / 1000;
-    scale += scaleDelta;
-    if (scale > 1) {
-      img.style.transform = 'scale(' + scale + ')';
-      start.x = end.x;
-      start.y = end.y;
-    }
-  }
+ 
+document.addEventListener('mouseup', function() {
+  dragging = false;
 });
