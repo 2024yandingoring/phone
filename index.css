@@ -1,0 +1,358 @@
+/* 自适应盒子 begin  */
+.box_box{
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    display: grid;
+    place-items: center; /* 水平垂直居中 */
+}
+/* 自适应盒子 end  */
+
+/* 第一层主盒子 用来固定里面的元素超出隐藏 begin  */
+.one_box{ /* one_box 最大的盒子 */
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    background-color: #EDF2FA;
+    position: absolute;
+}
+
+.one_box_ul{
+    width: 100%;
+    overflow-y: scroll; /*css ul滑动 */
+}
+
+/*css ul隐藏滚动条同时滑动 */
+.one_box_ul::-webkit-scrollbar{
+    display:none;
+}
+ 
+/* 首个li用来作为头部导航栏 begin */
+.one_box_li_head{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    /*css 在 position父元素里面，如果出现子元素穿过显示，就可以用下面的 */
+    z-index: 1;
+    max-width: 640px;
+    overflow: hidden;
+}
+
+.onn{
+    width: 50px;
+    /* background-color: aqua; */
+    font-size: 13px;
+    color: #171717;
+    font-weight: bold;
+    position: absolute;
+    left: calc(50% - 25px);
+    box-sizing: border-box;
+}
+
+.enn{
+    width: 30px;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    left: calc(50% - 14.8px);
+    top: 30px;
+    box-sizing: border-box;
+}
+
+.every_oe{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    box-sizing: border-box;
+    /* background-color: #E1251B; */
+}
+
+.oen{
+    width: 20px;
+    height: 20px;
+    /* background-color: aqua; */
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    box-sizing: border-box;
+}
+
+.eon{
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    box-sizing: border-box;
+}
+
+.every_oe_kuozhan{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5); /* 灰色背景，50% 透明度 */
+    position: fixed;
+    top: 40px;
+    z-index: 1;
+    max-width: 640px;
+    display: none;
+}
+
+.every_oe_kuozhan div{
+    margin: 4px auto;
+    border: 8px solid transparent;
+    border-bottom-color: #EDF2FA;
+    position: absolute;
+    top: -20px;
+    right: 22px;
+}
+
+.every_oe_kuozhan ul{
+    width: calc(100% - 10px);
+    height: 100px;
+    background-color: #EDF2FA;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border-radius: 1px;
+    overflow: hidden;
+    white-space: nowrap; /* 禁止换行，保证内容在一行显示 */
+    overflow-x: auto; /* 内容超出时允许水平滚动 */
+    -webkit-overflow-scrolling: touch; /* 移动设备上优化滚动 */
+}
+
+/*css ul隐藏滚动条同时滑动 */
+.every_oe_kuozhan ul::-webkit-scrollbar{
+    display: none;
+}
+
+.every_oe_kuozhan li{   
+    width: 50px;
+    height: 50px;
+    font-size: 11px;
+    background-color: white;
+    color: #1296db;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    overflow-x: auto; /* 允许水平滚动 */
+    display: inline-block;
+}
+/* 首个li用来作为头部导航栏 end */
+
+/* 第二个li用来做背景图和头像主盒子 begin */
+.two_box{
+    width: 100%;
+    height: 240px;
+    background-color: white;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.two_box_bjt{
+    width: 100%;
+    height: 220px;
+}
+
+.two_box_hend{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    right: 10px;
+    top: 230px;
+    box-sizing: border-box;
+}
+/* 第二个li用来做背景图和头像主盒子 end */
+
+/* 内容展示区域 begin */
+.three_box{
+    width: 100%;
+    /* height: 300px; */
+    background-color: white;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+}
+
+.three_box_head{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    left: 15px;
+}
+
+.three_box_box{
+    width: calc(100% - 80px);
+    height: 100%;
+    background-color: white;
+    margin-left: 60px;
+    box-sizing: border-box;
+}
+
+.three_box_box_id{
+    font-size: 15px;
+    color: #1296db;
+    text-align: left;
+}
+
+.text_red{
+    color: #E1251B;
+}
+
+.three_box_box_text{
+    font-size: 15px;
+    color: #171717;
+    text-align: justify;
+    display: block;
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word; 
+}
+
+.three_box_box_boximg{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.three_box_box_img{
+    width: calc(100% / 3);
+    height: 0;
+    background-color: black;
+    float: left;
+    padding-bottom: calc(100% / 3);
+}
+
+.three_box_box_4img{
+    width: calc(100% / 2);
+    height: 0;
+    background-color: black;
+    float: left;
+    padding-bottom: calc(100% / 2);
+}
+
+.three_box_box_4img img{
+    width: 100%;
+}
+
+.three_box_box_img img{
+    width: 100%;
+}
+
+.three_box_box_oneimg{
+    width: 150px;
+    height: 200px;
+    background-color: black;
+}
+
+.three_box_box_video{   
+    width: 150px;
+    height: 200px;
+    background-color: black;
+}
+
+.three_box_box_time{
+    font-size: 13px;
+    color: #ccc;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+/* 内容展示区域 end */
+
+/* 第一层主盒子 用来固定里面的元素超出隐藏 end  */
+
+
+/* 第三层盒子 内置浏览器 begin */
+.four_box{
+    width: 100%;
+    height: 100%;
+    background-color: #1F1F1F;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    display: none;
+    max-width: 640px;
+    cursor: pointer;
+}
+
+.four_box_ifa{
+    width: 100%;
+    height: calc(100% - 40px);
+    border: 0;
+    margin-top: 40px;
+    box-sizing: border-box;
+    /* background-color: #E1251B; */
+    display: none;
+}
+
+.four_box_img{
+    width: 100%;
+    height: 25%;
+    /* background-color: #E1251B; */
+    position: absolute;
+    top: calc(50% - 12.5%);
+    display: none;
+}
+
+.four_box_suimg{
+    width: 100%;
+    height: 400px;
+    max-height: 500px;
+    background-color: white;
+    position: absolute;
+    top: calc(50% - 200px);
+    display: none;
+}
+
+.btn_ifa_1span{
+    font-size: 15px;
+    color: #1296db;
+    text-align: center !important;
+}
+
+.btn_ifa_2span{
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    margin-left: calc(50% - 50px);
+    box-sizing: border-box;
+}
+
+.btn_ifa{
+    width: 100%;
+    height: 40px;
+    /* text-align: left; */
+    line-height: 40px;
+    color: white;
+    font-size: 17px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+.html_ping{
+    display: none;
+}
+/* 第三层盒子 内置浏览器 end */
+
+
