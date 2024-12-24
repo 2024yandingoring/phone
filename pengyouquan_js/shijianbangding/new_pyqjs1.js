@@ -46,7 +46,7 @@ video_2024_12_09.onclick = function(){
 //==
 
 var video_2024_12_01 = document.querySelector(".video_2024_12_01"); //获取播放视频图片类
-var video_2024_12_01_video_Android = "ttps://v.m.chenzhongtech.com/fw/long-video/3x7b3cc77a2d4me?cc=share_qqms&followRefer=151&shareMethod=CARD&docId=10&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3x7b3cc77a2d4me&shareId=18207679827051&shareToken=X-7ireFzETsEU1JZ&shareResourceType=PHOTO_SELF&userId=3xfnf5ngb82i22c&shareType=2&et=1_a%2F2007926705121340257_p0&shareMode=APP&efid=3xfnf5ngb82i22c&originShareId=18207679827051&appType=21&shareObjectId=5204190998218774687&shareUrlOpened=0&timestamp=1734964431282";
+var video_2024_12_01_video_Android = "https://player.bilibili.com/player.html?isOutside=true&aid=113018188925480&bvid=BV1GvWvegER7&cid=500001661131714&p=1";
 var video_2024_12_01_video_apple = "https://v.m.chenzhongtech.com/fw/long-video/3x7b3cc77a2d4me?cc=share_wxms&followRefer=151&shareMethod=VIDEO&docId=9&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3x7b3cc77a2d4me&shareId=18207690548652&shareToken=X3hUGkb4flMC1lB&shareResourceType=PHOTO_OTHER&userId=3xfnf5ngb82i22c&shareType=1&et=1_a%2F2007914726026629777_p0&shareMode=APP&efid=0&originShareId=18207690548652&appType=1&shareObjectId=5204190998218774687&shareUrlOpened=0&timestamp=1734962583268";
 video_2024_12_01.onclick = function(){
     four_box.style.display = "block";
