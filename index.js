@@ -52,13 +52,13 @@ var html_ping_Android = document.querySelector(".html_ping_Android"); //获取�
 var html_ping_apple = document.querySelector(".html_ping_apple"); //获取传替网址类
 
 btn_ifa.onclick = function(){
+    four_box_ifa.src = "https://player.bilibili.com/player.html?isOutside=true&aid=113713906455170&bvid=BV1QgCYY4EtA&cid=27529775729&p=1";
     four_box.style.display = "none";
     four_box_ifa.style.display = "none";
     four_box_img.style.display = "none";
     four_box_suimg.style.display = "none";
     four_box_ifa_Android.style.display = "none";
     four_box_ifa_apple.style.display = "none";
-    four_box_ifa.src = "";
     four_box_img.src = "";
     four_box_suimg.src = "";
     html_ping_Android.innerHTML = "";
