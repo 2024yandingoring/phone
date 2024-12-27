@@ -10,7 +10,7 @@ var html_ping_apple = document.querySelector(".html_ping_apple"); //获取传替
 
 // 内容区域事件绑定 begin
 var video_2024_12_16 = document.querySelector(".video_2024_12_16"); //获取播放视频图片类
-var video_2024_12_16_video_Android = "https://v.m.chenzhongtech.com/fw/photo/3x5qrzt6nymnm4u?cc=share_wxms&followRefer=151&shareMethod=VIDEO&docId=10&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3x5qrzt6nymnm4u&shareId=18192560931111&shareToken=X9lx0RFdPFYV1IX&shareResourceType=PHOTO_SELF&userId=3xfnf5ngb82i22c&shareType=2&et=1_a%2F2007885683345745825_p0&shareMode=APP&efid=3xfnf5ngb82i22c&originShareId=18192560931111&appType=21&shareObjectId=5216294421307821950&shareUrlOpened=0&timestamp=1734317259140";
+var video_2024_12_16_video_Android = "https://player.bilibili.com/player.html?isOutside=true&aid=113725331742706&bvid=BV1QSCHYcEbc&cid=27564444502&p=1";
 var video_2024_12_16_video_apple = "https://v.m.chenzhongtech.com/fw/photo/3x5qrzt6nymnm4u?cc=share_wxtl&followRefer=151&shareMethod=CARD&docId=9&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3x5qrzt6nymnm4u&shareId=18207631024613&shareToken=X3ibXB1WMuzV9yD&shareResourceType=PHOTO_OTHER&userId=3xfnf5ngb82i22c&shareType=1&et=1_a%2F2004100752986583842_sr17000&shareMode=APP&efid=0&originShareId=18207631024613&appType=1&shareObjectId=5216294421307821950&shareUrlOpened=0&open_source=pic_share&timestamp=1734958020511";
 video_2024_12_16.onclick = function(){
     four_box.style.display = "block";
@@ -28,7 +28,7 @@ video_2024_12_16.onclick = function(){
 //==
 
 var video_2024_12_09 = document.querySelector(".video_2024_12_09"); //获取播放视频图片类
-var video_2024_12_09_video_Android = "https://v.m.chenzhongtech.com/fw/photo/3xpdru63j8vua7w?cc=share_wxms&followRefer=151&shareMethod=VIDEO&docId=10&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3xpdru63j8vua7w&shareId=18188773806557&shareToken=X1flqjptP2171YJ&userId=3xfnf5ngb82i22c&shareType=2&et=1_a%2F2004063972582783490_p0&shareMode=APP&efid=3xfnf5ngb82i22c&originShareId=18188773806557&appType=21&shareObjectId=5208413120421207721&shareUrlOpened=0&timestamp=1734015170358";
+var video_2024_12_09_video_Android = "https://player.bilibili.com/player.html?isOutside=true&aid=113725348516179&bvid=BV1XmCHYaEf4&cid=27564508912&p=1";
 var video_2024_12_09_video_apple = "https://v.m.chenzhongtech.com/fw/photo/3xpdru63j8vua7w?cc=share_wxms&followRefer=151&shareMethod=VIDEO&docId=9&kpn=KUAISHOU&subBiz=BROWSE_SLIDE_PHOTO&photoId=3xpdru63j8vua7w&shareId=18207594352889&shareToken=X3OOYn34uqtMTOz&shareResourceType=PHOTO_OTHER&userId=3xfnf5ngb82i22c&shareType=1&et=1_a%2F2007914726026629777_p0&shareMode=APP&efid=0&originShareId=18207594352889&appType=1&shareObjectId=5208413120421207721&shareUrlOpened=0&timestamp=1734962422252";
 video_2024_12_09.onclick = function(){
     four_box.style.display = "block";
