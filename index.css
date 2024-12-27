@@ -142,7 +142,8 @@
     color: #1296db;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+/*     line-height: 50px; */
+    padding-top: 18px;
     margin-top: 25px;
     margin-left: 5px;
     box-sizing: border-box;
