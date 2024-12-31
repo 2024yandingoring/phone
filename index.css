@@ -31,7 +31,7 @@
 .one_box_li_head{
     width: 100%;
     height: 40px;
-    background-color: white;
+    background-color: #ededed;
     text-align: center;
     line-height: 40px;
     box-sizing: border-box;
@@ -105,6 +105,7 @@
     z-index: 1;
     max-width: 640px;
     display: none;
+    cursor: pointer;
 }
 
 .every_oe_kuozhan div{
@@ -129,6 +130,13 @@
     -webkit-overflow-scrolling: touch; /* 移动设备上优化滚动 */
 }
 
+.top_li{
+    background-color: #ccc !important;
+}
+
+.top_li span{
+    color: black;
+}
 /*css ul隐藏滚动条同时滑动 */
 .every_oe_kuozhan ul::-webkit-scrollbar{
     display: none;
@@ -142,7 +150,7 @@
     color: #1296db;
     border-radius: 50%;
     text-align: center;
-/*     line-height: 50px; */
+    /* line-height: 50px; */
     padding-top: 18px;
     margin-top: 25px;
     margin-left: 5px;
@@ -185,6 +193,7 @@
     background-color: white;
     margin-bottom: 1px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .three_box_head{
@@ -214,14 +223,28 @@
     color: #E1251B;
 }
 
+/* 内容展示区域 长文本显示 没有超3行的自适应 */
+.three_box_box_text.quanwen_auto{
+    height: auto;
+}
+
 .three_box_box_text{
+    width: 100%;
     font-size: 15px;
+    height: 60px;
     color: #171717;
     text-align: justify;
-    display: block;
-    white-space: normal;
+    /* display: block; */
     word-break: break-all;
     word-wrap: break-word; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+/* 内容展示区域 长文本显示 */
+.active{ 
+    height: auto;
 }
 
 .three_box_box_boximg{
@@ -235,26 +258,20 @@
 .three_box_box_img{
     width: calc(100% / 3);
     height: 0;
-    background-color: black;
+    /* background-color: black; */
     float: left;
     padding-bottom: calc(100% / 3);
-}
-
-.three_box_box_4img{
-    width: calc(100% / 2);
-    height: 0;
-    background-color: black;
-    float: left;
-    padding-bottom: calc(100% / 2);
-}
-
-.three_box_box_4img img{
-    width: 100%;
 }
 
 .three_box_box_img img{
     width: 100%;
 }
+
+/* 4宫格重要的参数 */
+.img_none{
+    background-color: white;
+}
+/* 4宫格重要的参数 */
 
 .three_box_box_oneimg{
     width: 150px;
@@ -303,36 +320,6 @@
     box-sizing: border-box;
     /* background-color: #E1251B; */
     display: none;
-}
-
-.four_box_ifa_Android{
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-    border-radius: 50%;
-    line-height: 30px;
-    text-align: center;
-    background-color: rgba(226, 218, 218, 0.2); /* 灰色背景，50% 透明度 */
-    color: rgba(32, 31, 31, 0.8); /* 灰色背景，50% 透明度 */;
-    position: absolute;
-    top: 130px;
-    right: 2px;
-    /* display: none; */
-}
-
-.four_box_ifa_apple{
-    width: 30px;
-    height: 30px;
-    font-size: 11px;
-    border-radius: 50%;
-    line-height: 30px;
-    text-align: center;
-    background-color: rgba(226, 218, 218, 0.2); /* 灰色背景，50% 透明度 */
-    color: rgba(32, 31, 31, 0.8); /* 灰色背景，50% 透明度 */;
-    position: absolute;
-    top: 130px;
-    right: 2px;
-    /* display: none; */
 }
 
 .four_box_img{
