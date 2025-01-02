@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-n">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="never">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎回来-welcome back</title>
+
+    <!-- 引入网页头部logo -->
+    <link rel="icon"
+        href="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa1S9Wqv/LiySpxowE0yeWXwBdXN*SQ1LaTAUt2.qD8TVp4kGYP.rusDvjNtf3HcvouWnfum.Cpg3E1BbkxryYw3AqR9A7uoLy2zn.leG7RTzWv3u8DA!/mnull&bo=yADIAMgAyAADByI!&rf=photolist&t=5">
+    <!-- 引入默认样式 -->
+    <link rel="stylesheet" href="../../mr.css">
+
+    <style>
+        /* 自适应盒子 begin  */
+        .box_box {
+            width: 100%;
+            height: 100%;
+            /* text-align: center; */
+            display: grid;
+            place-items: center;
+            /* 水平垂直居中 */
+        }
+
+        /* 自适应盒子 end  */
+
+        /* 第一层主盒子 用来固定里面的元素超出隐藏 begin  */
+        .one_box {
+            /* one_box 最大的盒子 */
+            width: 100%;
+            max-width: 640px;
+            height: 100%;
+            background-color: #EDF2FA;
+            position: absolute;
+        }
+
+        .one_box_li_head {
+            width: 100%;
+            height: 40px;
+            background-color: #ededed;
+            text-align: center;
+            line-height: 40px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            /*css 在 position父元素里面，如果出现子元素穿过显示，就可以用下面的 */
+            z-index: 1;
+            max-width: 640px;
+            overflow: hidden;
+        }
+
+        .onn {
+            width: 60px;
+            /* background-color: aqua; */
+            font-size: 13px;
+            color: #171717;
+            font-weight: bold;
+            position: absolute;
+            left: calc(50% - 30px);
+            box-sizing: border-box;
+        }
+
+        .enn {
+            width: 40px;
+            height: 1px;
+            background-color: #ccc;
+            position: absolute;
+            left: calc(50% - 19.8px);
+            top: 30px;
+            box-sizing: border-box;
+        }
+
+        .every_oe {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            box-sizing: border-box;
+            /* background-color: #E1251B; */
+        }
+
+        .oen {
+            width: 20px;
+            height: 20px;
+            /* background-color: aqua; */
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            box-sizing: border-box;
+        }
+
+        .eon {
+            width: 6px;
+            height: 6px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            right: 17px;
+            top: 17px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            font-size: 20px !important;
+            position: absolute;
+            left: 0;
+            cursor: pointer;
+            display: none;
+        }
+
+        .every_oe_kuozhan {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.5);
+            /* 灰色背景，50% 透明度 */
+            position: fixed;
+            top: 40px;
+            z-index: 1;
+            max-width: 640px;
+            display: none;
+            cursor: pointer;
+        }
+
+        .every_oe_kuozhan div {
+            margin: 4px auto;
+            border: 8px solid transparent;
+            border-bottom-color: white;
+            position: absolute;
+            top: -20px;
+            right: 22px;
+        }
+
+        .every_oe_kuozhan ul {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            box-sizing: border-box;
+            border-radius: 1px;
+            overflow: hidden;
+            white-space: nowrap;
+            /* 禁止换行，保证内容在一行显示 */
+            overflow-x: auto;
+            /* 内容超出时允许水平滚动 */
+            -webkit-overflow-scrolling: touch;
+            /* 移动设备上优化滚动 */
+        }
+
+        /*css ul隐藏滚动条同时滑动 */
+        .every_oe_kuozhan ul::-webkit-scrollbar {
+            display: none;
+        }
+
+        .every_oe_kuozhan li {
+            width: 50px;
+            height: 50px;
+            font-size: 11px;
+            background-color: #EDF2FA;
+            color: #1296db;
+            border-radius: 50%;
+            text-align: center;
+            /* line-height: 50px; */
+            padding-top: 18px;
+            margin-top: 25px;
+            margin-left: 5px;
+            box-sizing: border-box;
+            overflow-x: auto;
+            /* 允许水平滚动 */
+            display: inline-block;
+        }
+
+        .top_li {
+            color: black !important;
+        }
+
+        .top_li span {
+            color: #1296db !important;
+        }
+
+        /* 第一层主盒子 用来固定里面的元素超出隐藏 end  */
+
+        /* 第二层主盒子 内容区域 begin */
+        .two_box {
+            width: 100%;
+            height: calc(100% - 40px);
+            position: fixed;
+            top: 40px;
+            max-width: 640px;
+            overflow-y: scroll;
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+            /* display: none; */
+        }
+
+        /*css ul隐藏滚动条同时滑动 */
+        .two_box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .two_box li {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .time {
+            color: #cfd0d8;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .content_box {
+            width: calc(100% - 10px);
+            height: 173px;
+            margin-left: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        .content_id {
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-top: 10px;
+        }
+
+        .content_title {
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+
+        .content_content {
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-top: 10px;
+            color: #cfd0d8;
+        }
+
+        .bottom_zhushi {
+            width: 100%;
+            height: 30px;
+            border-top: 1px solid #f1f1f1;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+
+        .bottom_zhushi span {
+            position: absolute;
+            right: 20px;
+        }
+
+        /* 第二层主盒子 内容区域 end */
+
+        /* 第三层主盒子 内置文本 begin */
+        .three_box {
+            width: 100%;
+            /* height: calc(100% - 40px); */
+            margin-top: 40px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #cfd0d8;
+            text-align: justify;
+            padding: 5px;
+            box-sizing: border-box;
+            overflow-y: scroll;
+            display: none;
+        }
+
+        .three_box::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 第三层主盒子 内置文本 end */
+    </style>
+</head>
+
+<body>
+    <!-- 自适应盒子 -->
+    <div class="box_box">
+        <!-- 第一层主盒子 用来固定里面的元素超出隐藏 -->
+        <div class="one_box">
+            <!-- 头部导航栏 -->
+            <div class="one_box_li_head">
+                <div class="onn">开发日志</div>
+                <div class="enn"></div>
+                <!-- 小程序通用的按钮 -->
+                <div class="every_oe">
+                    <div class="oen"></div>
+                    <div class="eon"></div>
+                </div>
+                <!-- 内置文本关闭按钮 -->
+                <span class="btn">&lt;</span>
+            </div>
+            <!-- 扩展项目 -->
+            <div class="every_oe_kuozhan">
+                <!-- 三角型 -->
+                <div></div>
+                <ul class="every_oe_kuozhan_ul">
+                    <!-- top_li是当前位置颜色，<span>▲</span>是符号当前位置 -->
+                    <a href="../../index.html">
+                        <li>朋友圈</li>
+                    </a>
+                    <a href="./kai_fa_ri_zhi.html">
+                        <li class="top_li">开发日志<br><span>▲</span></li>
+                    </a>
+                    <li>移动商城</li>
+                    <li>移动新闻</li>
+                    <li>移动应用</li>
+                </ul>
+            </div>
+            <!-- 第二层主盒子 内容区域 -->
+            <ul class="two_box">
+
+                <!-- phone_pengyouquan 日志 -->
+                <li>
+                    <!-- 时间 -->
+                    <div class="time">25/1/2 上午00:00</div>
+                    <!-- 内容盒子 -->
+                    <div class="content_box phone_pengyouquan">
+                        <!-- 来源于账号-->
+                        <div class="content_id">admin</div>
+                        <!-- 标题 -->
+                        <div class="content_title">手机端朋友圈</div>
+                        <!-- 内容  -->
+                        <div class="content_content">
+                            <div class="content_content_inthetop">手机端朋友圈_in_2024.12.23（移植版上线）</div>Content Time
+                            ==>手机端朋友圈_in_2024.12.29更新了和Content Time ==>手机端朋友圈_in_2025.1.1更新了
+                        </div>
+                        <!-- 底部注释 -->
+                        <div class="bottom_zhushi">日志详情<span>></span></div>
+                    </div>
+                </li>
+
+                <!-- pc_boke 日志  -->
+                <li>
+                    <!-- 时间 -->
+                    <div class="time">22/2/26 下午6:45</div>
+                    <!-- 内容盒子 -->
+                    <div class="content_box pc_boke">
+                        <!-- 来源于账号-->
+                        <div class="content_id">admin</div>
+                        <!-- 标题 -->
+                        <div class="content_title">电脑端博客</div>
+                        <!-- 内容  -->
+                        <div class="content_content">
+                            <div class="content_content_inthetop">大二开始研发，2024/12月底停止更新维护。</div>Content Time
+                            ==>电脑端博客_in_2024/12/23更新了和Content Time ==>电脑端博客_in_2024/12/9更新了和Content Time
+                            ==>电脑端博客_in_2024/12/1更新了和Content Time ==>电脑端博客_in_2023/4/7更新了
+                        </div>
+                        <!-- 底部注释 -->
+                        <div class="bottom_zhushi">日志详情<span>></span></div>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- 第三层主盒子 内置文本 -->
+            <ul class="three_box">我是文本内容</ul>
+        </div>
+    </div>
+</body>
+<script>
+    // every_oe 小程序通用按钮 点击事件 begin 
+    var every_oe = document.querySelector(".every_oe"); //主盒子类
+    var every_oe_kuozhan = document.querySelector(".every_oe_kuozhan"); //获取扩展盒子类
+
+    var bug_a = 1;
+    every_oe.onclick = function () {
+        if (bug_a == 1) {
+            every_oe_kuozhan.style.display = "block";
+            bug_a++;
+            //window.location.href = ""; //这里更新点击按钮网址
+        } else {
+            every_oe_kuozhan.style.display = "none";
+            bug_a = 1;
+            //window.location.href = ""; //这里更新点击按钮网址
+        }
+    }
+
+    var btn = document.querySelector(".btn"); //内置文本关闭按钮类
+    var two_box = document.querySelector(".two_box"); //内容区域主盒子类
+    var three_box = document.querySelector(".three_box"); //内置文本盒子类
+
+    btn.onclick = function () {
+        three_box.innerHTML = "";
+        three_box.style.display = "none"; //内置文本盒子
+        two_box.style.display = "block"; //内容区域盒子
+        btn.style.display = "none";
+    }
+    // every_oe 小程序通用按钮 点击事件 end
+
+    // pc_boke 日志 begin
+    var pc_boke = document.querySelector(".pc_boke"); //获取pc_boke日志类
+    var pc_boke_txt = "Content Time ==>电脑端博客_in_2024/12/23<br>1.pc端博客停止更新维护，后期只用来辅助开发。<br>2.移植到移动端“朋友圈”。<br><br>Content Time ==>电脑端博客_in_2024/12/9<br>1.优化内置浏览器视频播放算法。<br>2.尝试与抖音外链相互兼容。<br>3.快手外链完美适配。<br><br>Content Time ==>电脑端博客_in_2024/12/1<br>1.去除了内置浏览器中的相册展示功能（上下左右偏移）。<br>2.新增内置浏览器中的相册展示功能（适应全屏、恢复自适应）。<br>3.新增底部导航分页2024。<br>4.新增博客内置浏览器视频播放功能。<br><br>Content Time ==>电脑端博客_in_2023/4/7<br>1.更新了我的工作内容和功能。<br>2.优化了我的相册底部背景颜色和第一排顶部展示位置。<br><br>Content Time ==>电脑端博客_in_2023/4/5<br>1.更新我的相册内容和功能。<br>2.修复了已知的bug。<br>3.移植了内置图片展示到我的博客功能内，后续不在新增页面的形式展示图片。<br><br>Content Time ==>电脑端博客_in_2023/4/3<br>1.修复了已知的bug。<br><br>Content Time ==>电脑端博客_in_2023/4/2<br>1.新增了登录博客页面登录授权本站信息与责任。<br>2.更新了免责声明条款说明。<br><br>Content Time ==>电脑端博客_in_2023/2/14<br>1.去除左边博客快捷导航，新增博文底部页码。<br>2.将本地图片全部上传到QQ服务器，解决图片加载缓存时间长的问题。<br><br>Content Time ==>电脑端博客_in_2023/2/7<br>1.新增了内置浏览器点击更新内容的功能。<br>2.去除了垂直浏览器的滚动条，内置浏览器除外。<br><br>Content Time ==>电脑端博客_in_2023/1/27<br>1.线上版由于经费不足而停止开发，为完善后面服务在服务器运营期间完成移植单机版。<br>2.移除多项后台与前端接口，对资料和导航栏描述进行了整改，将原来的页码导航栏整改成个性标签。<br>3.将后端的更新日志，移植到了前端底部注释处。<br>4.移除了回顶部功能，后期所有页面由内置浏览器独立完成。<br>5.新增了我的博客分类导航栏。<br>6.新增了附件功能，在原来的点赞转发处。<br><br>Content Time ==>电脑端博客_in_2022/5/3<br>1.更新了资料修改功能。<br>2.新增js自动增加版本号功能。<br><br>Content Time ==>电脑端博客_in_2022/5/2<br>1.优化后端log-UI，新增日志功能。<br>2.新增前端底部注释统一年份功能。<br>3.更新了留言日志功能。<br>4.更新了反馈日志功能。";
+
+    pc_boke.onclick = function () {
+        btn.style.display = "block";
+        three_box.style.display = "block"; //内置文本盒子
+        two_box.style.display = "none"; //内容区域盒子
+        three_box.innerHTML = pc_boke_txt;
+    }
+    // pc_boke 日志 end
+
+    // phone_pengyouquan 日志 begin
+    var phone_pengyouquan = document.querySelector(".phone_pengyouquan"); //获取pc_boke日志类
+    var phone_pengyouquan_txt = "Content Time ==>手机端朋友圈_in_2025.1.1<br>1.修复了,安卓微信和苹果微信文本内容显示高度问题，原来的60px改成了63px。<br>2.新增功能，扩展内容区域描述锚点，主体文本呈黑色，底部是蓝牙三角形。<br>3.优化了，扩展区域背景颜色和宽度为100%。<br><br>Content Time ==>手机端朋友圈_in_2024.12.29<br>1.扩展内容，文本跟随安卓微信，苹果微信统一居中，去除了line-height，替换为padding-top像素文本居中，这样就会固定盒子大小使文本居中。<br>2.video视频链接，统一采用b站外链，去除快手、抖音外链，b站外链除了清晰度不太好，完美适配安卓、苹果、pc端。<br>3.内容展示区域，修复了4宫格太大的bug，现在会跟随9宫格的大小进行拼整4宫格。<br>4.新增功能（超长文本隐藏，点击后显示），遍历同类名绑定事件先进行一个所有同类绑定事件删除，在单独设置被点击的元素hight，auto。<br><br>Content Time ==>手机端朋友圈_in_2024.12.23（移植版上线）,移植了pc端的博客网站到移动端，目前能适配Android、apple、pc。ios平板不适配，安卓平板未测试，虽然完成了初始界面基本适配，但小细节还有很多没做到的，比如四宫格超级大，不符合美感、快手视频外链苹果微信界面无法播放，pc端视频外链播放也有很多问题，都存在技术攻关等难题，也许后面会随着时间慢慢想办法尝试修复吧。每次都隔挺长时间才更新的，所以代码有时候看起来清晰美感，有时候乱糟糟找不到逻辑，东墙补西墙。<br><br>1.逻辑建设，关于十万条数据渲染问题，采用了最原始的“display，none”和js渲染，可以有效缓解页面加载。分为html==>十条数据为一层，只建立标签，无数据；js==>分三层，第一层是数据的绑定事件js，第二层是display，none遍历隐藏层，第三层是display，block显示层、Dom元素修改层。<br>2.UI界面，模仿了微信朋友圈UI，按个人理解，内容区域逐个分层，头像分为单独的block，id名分为单独的行内元素，内容区域也分为独立行内元素，图片区域做了三套方案，第一套是单独的150*200像素长方形图片展示；第二套是九宫格，采用180*180像素正方形3列方块图片展示，按屏幕自适应3块，相比以往代码有突出进步和简洁，让高度为0，宽度和底部内边距100%/3，这样就可以自适应；第三套是四宫格，采用了180*180像素正方形2个为一组的组排方块图片展示。<br>3.扩展应用，在导航栏右顶部按钮区域，建立了多个网页应用关联，更加方便浏览所有作品。";
+
+    phone_pengyouquan.onclick = function () {
+        btn.style.display = "block";
+        three_box.style.display = "block"; //内置文本盒子
+        two_box.style.display = "none"; //内容区域盒子
+        three_box.innerHTML = phone_pengyouquan_txt;
+    }
+    // phone_pengyouquan 日志 end
+</script>
+
+</html>
