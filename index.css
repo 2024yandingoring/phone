@@ -41,6 +41,7 @@
     z-index: 1;
     max-width: 640px;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .onn{
@@ -71,6 +72,7 @@
     right: 10px;
     box-sizing: border-box;
     /* background-color: #E1251B; */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .oen{
@@ -106,6 +108,7 @@
     max-width: 640px;
     display: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .every_oe_kuozhan div{
@@ -127,6 +130,7 @@
     white-space: nowrap; /* 禁止换行，保证内容在一行显示 */
     overflow-x: auto; /* 内容超出时允许水平滚动 */
     -webkit-overflow-scrolling: touch; /* 移动设备上优化滚动 */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .top_li{
@@ -194,6 +198,7 @@
     margin-bottom: 1px;
     box-sizing: border-box;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .three_box_head{
@@ -366,6 +371,7 @@
     background-color: black;
     position: absolute;
     top: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .html_ping_Android{
