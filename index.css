@@ -14,7 +14,7 @@
     max-width: 640px;
     height: 100%;
     background-color: #EDF2FA;
-    position: absolute;
+    position: relative;
 }
 
 .one_box_ul{
