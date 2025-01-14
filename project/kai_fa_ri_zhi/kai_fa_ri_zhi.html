@@ -68,6 +68,7 @@
             position: absolute;
             left: calc(50% - 30px);
             box-sizing: border-box;
+            cursor: default;
         }
 
         .enn {
@@ -329,13 +330,35 @@
                     <a href="./kai_fa_ri_zhi.html">
                         <li class="top_li">开发日志<br><span>▲</span></li>
                     </a>
-                    <li>移动商城</li>
+                    <a href="../yi_dong_shang_cheng/yi_dong_shang_cheng.html">
+                        <li>移动商城<br></li>
+                    </a>
                     <li>移动新闻</li>
                     <li>移动应用</li>
                 </ul>
             </div>
             <!-- 第二层主盒子 内容区域 -->
             <ul class="two_box">
+
+                <!-- phone_yidongshangcheng 日志 -->
+                <li>
+                    <!-- 时间 -->
+                    <div class="time">25/1/13 下午15:19</div>
+                    <!-- 内容盒子 -->
+                    <div class="content_box phone_yidongshangcheng">
+                        <!-- 来源于账号-->
+                        <div class="content_id">admin</div>
+                        <!-- 标题 -->
+                        <div class="content_title">手机端商城</div>
+                        <!-- 内容  -->
+                        <div class="content_content">
+                            <div class="content_content_inthetop">手机端商城_in_2025.1.13开发成立</div>Content Time
+                            ==>手机端商城_in_2025.1.13更新了
+                        </div>
+                        <!-- 底部注释 -->
+                        <div class="bottom_zhushi">日志详情<span>></span></div>
+                    </div>
+                </li>
 
                 <!-- phone_pengyouquan 日志 -->
                 <li>
@@ -437,6 +460,18 @@
         three_box.innerHTML = phone_pengyouquan_txt;
     }
     // phone_pengyouquan 日志 end
+
+    // phone_yidongshangcheng 日志 begin
+    var phone_yidongshangcheng = document.querySelector(".phone_yidongshangcheng"); //获取pc_boke日志类
+    var phone_yidongshangcheng_txt = "Content Time ==>手机端朋友圈_in_2025.1.13<br>1.以盒子模型为基础理念，展开各个元素适配。<br>2.首页数据渲染分层进行渲染，瀑布流商品分为，隐藏层display：none，js；显示层display：“”，js；事件绑定js。<br>3.搜索引擎，用定时器渲染数据并且隐藏盒子，等待关键字被搜索时，显示盒子。<br>4.客服信息窗口，尝试用api接口对接邮箱和ai模型系统<br>5.登录模块，尝试采用本地id文本为数据类型，展开一系列的开发，例如：注册、登录、收藏、历史记录，充值钱包，订单明细。<br>6.商品资料页面，购买和填地址页面，支付页面（提供一种思路，点击购买时将标题文本复制到购买信息界面，然后生成文本id数据类型，显示在登录模块订单明细）。";
+
+    phone_yidongshangcheng.onclick = function () {
+        btn.style.display = "block";
+        three_box.style.display = "block"; //内置文本盒子
+        two_box.style.display = "none"; //内容区域盒子
+        three_box.innerHTML = phone_yidongshangcheng_txt;
+    }
+    // phone_yidongshangcheng 日志 end
 </script>
 
 </html>
