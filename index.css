@@ -315,6 +315,7 @@
     display: none;
     max-width: 640px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .four_box_ifa{
