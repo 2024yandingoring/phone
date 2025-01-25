@@ -26,3 +26,29 @@
         btn.style.display = "none";
     }
     // every_oe 小程序通用按钮 点击事件 end
+
+ 
+
+
+// 底部导航 事件
+const contentLeft = document.querySelector('.content_left');
+const contentRight = document.querySelector('.content_right');
+const loginTimeBox = document.querySelector('.loginTime_box');
+const fourBox = document.querySelector('.four_box');
+
+// 首页
+contentLeft.addEventListener('click',() =>{
+    loginTimeBox.style.display = 'none';
+    fourBox.style.display = 'block';
+    contentLeft.style.color = '#E2231A';
+    contentRight.style.color = '#000';
+});
+
+// 登录
+contentRight.addEventListener('click',() =>{
+    loginTimeBox.style.display = 'block';
+    fourBox.style.display = 'none';
+    contentLeft.style.color = '#000';
+    contentRight.style.color = '#E2231A';
+});
+// 底部导航 事件
