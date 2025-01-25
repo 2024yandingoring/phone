@@ -1,0 +1,24 @@
+name: Generate JS with Token
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate JS file with token
+        run: |
+          echo "const token = '${{ secrets.MY_TOKEN }}';" > token.js
+
+      - name: Optionally deploy to a hosting service
+        # 如果你要部署到特定的静态托管服务，可以在这里添加相应的部署步骤
+        # 例如，将生成的文件复制到指定目录
+        run: |
+          mkdir -p dist
+          cp token.js dist/
