@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // 示例：使用令牌进行 API 请求
         async function makeApiCall() {
             try {
-                const response = await fetch('https://your-api-url.com', {
+                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
                     headers: {
                         'Authorization': `Bearer ${GITHUB_TOKEN}`
                     }
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         makeApiCall();
 
-    // 请将此替换为你自己的 GitHub 个人访问令牌
-
+    // 请将此替换为你自己的 GitHub 个人访问令
+   
     // 这里可以设置一个默认的 Gist ID 或在代码中动态生成
     let GIST_ID = 'a0fa7fab625decc42a4cb6478f863289';
 
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // 示例：使用令牌进行 API 请求
         async function makeApiCall() {
             try {
-                const response = await fetch('https://your-api-url.com', {
+                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
                     headers: {
                         'Authorization': `Bearer ${GITHUB_TOKEN_letter_popup}`
                     }
@@ -507,7 +507,7 @@ const address_popup_title = document.querySelector('.address_popup_title');
  // 示例：使用令牌进行 API 请求
         async function makeApiCall() {
             try {
-                const response = await fetch('https://your-api-url.com', {
+                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
                     headers: {
                         'Authorization': `Bearer ${GITHUB_TOKEN_address_popup}`
                     }
@@ -695,7 +695,7 @@ closeBtn.addEventListener('click', () => {
  // 示例：使用令牌进行 API 请求
         async function makeApiCall() {
             try {
-                const response = await fetch('https://your-api-url.com', {
+                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
                     headers: {
                         'Authorization': `Bearer ${GITHUB_TOKEN_feedback_popup}`
                     }
@@ -956,7 +956,7 @@ GFService.addEventListener('click', () => {
  // 示例：使用令牌进行 API 请求
         async function makeApiCall() {
             try {
-                const response = await fetch('https://your-api-url.com', {
+                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
                     headers: {
                         'Authorization': `Bearer ${GITHUB_TOKEN_shoppingCart_popup}`
                     }
@@ -973,6 +973,10 @@ GFService.addEventListener('click', () => {
 
 
 // 购物车弹窗 事件
+
+
+
+
 
 // GitHub 相关配置
 const GIST_ID_shoppingCart_popup = '1ca7ee625bd9f0385ce36dba701f51f6';
