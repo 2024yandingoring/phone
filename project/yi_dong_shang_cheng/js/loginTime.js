@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const backendManagement = document.querySelector('.backendManagement'); // 获取 backendManagement 元素
 
 
-    // main.js
-import { token } from './dist/token.js';
 
 // 示例：使用令牌进行 API 请求
 async function makeApiCall() {
