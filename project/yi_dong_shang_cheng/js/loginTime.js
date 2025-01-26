@@ -27,28 +27,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const backendManagement = document.querySelector('.backendManagement'); // 获取 backendManagement 元素
 
 
-  <!-- 引入生成的 token.js 文件 -->
-    <script src="dist/token.js"></script>
-    <script>
-        // 使用 GITHUB_TOKEN 变量进行操作
-        console.log('获取到的令牌:', GITHUB_TOKEN);
+    // main.js
+import { token } from './dist/token.js';
 
-        // 示例：使用令牌进行 API 请求
-        async function makeApiCall() {
-            try {
-                const response = await fetch('https://api.github.com/gists/${GIST_ID}', {
-                    headers: {
-                        'Authorization': `Bearer ${GITHUB_TOKEN}`
-                    }
-                });
-                const data = await response.json();
-                console.log('API 返回的数据:', data);
-            } catch (error) {
-                console.error('API 请求出错:', error);
+// 示例：使用令牌进行 API 请求
+async function makeApiCall() {
+    try {
+        // 假设 GIST_ID 是一个已定义的变量
+        const GIST_ID = 'a0fa7fab625decc42a4cb6478f863289';// 这里只是示例，实际需正确定义
+        const response = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
             }
-        }
+        });
+        const data = await response.json();
+        console.log('API 返回的数据:', data);
+    } catch (error) {
+        console.error('API 请求出错:', error);
+    }
+}
 
-        makeApiCall();
+makeApiCall();
 
     // 请将此替换为你自己的 GitHub 个人访问令
    
