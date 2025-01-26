@@ -1,2 +1,2 @@
-const token = 'your_secret_token_value';
-module.exports = { token };
+const token = 'your_token_value';
+export { token };
