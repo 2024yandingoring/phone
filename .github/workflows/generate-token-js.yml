@@ -12,10 +12,31 @@ jobs:
       - name: Generate JS file with token
         run: |
           echo "const token = '${{ secrets.MY_TOKEN }}';" > token.js
+      - name: Check if token.js exists
+        run: |
+          if [ -f token.js ]; then
+            echo "token.js exists"
+          else
+            echo "token.js does not exist"
+            exit 1
       - name: Optionally deploy to a hosting service
         run: |
           mkdir -p dist
+          chmod +r token.js
+          chmod +w dist
           cp token.js dist/
+      - name: Check if dist directory exists and contains token.js
+        run: |
+          if [ -d dist ]; then
+            echo "dist directory exists"
+            if [ -f dist/token.js ]; then
+              echo "token.js is in dist directory"
+            else
+              echo "token.js is not in dist directory"
+              exit 1
+          else
+            echo "dist directory does not exist"
+            exit 1
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions - gh - pages@v3
         with:
