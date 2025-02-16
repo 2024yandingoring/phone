@@ -18,61 +18,117 @@ every_oe.onclick = function () {
 
 
 
-// two_box 第二个li头像和头部导航栏触动事件 begin
-var two_box_hend = document.querySelector(".two_box_hend"); //获取头像类
-var three_box_head = document.querySelector(".three_box_head"); //获取内容区域头像类
 
-//监控Windows滑动事件，top顶部值
-window.addEventListener("scroll", function (event) {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (scrollTop >= 190) { //第二个li背景图里面的head
-        // console.log("渐变");
-        two_box_hend.style.transition = "opacity 0.8s";
-        two_box_hend.style.opacity = "0";
-    } else {
-        // console.log("不在范围");
-        two_box_hend.style.transition = "opacity 0.8s";
-        two_box_hend.style.opacity = "1";
+document.addEventListener('touchstart', function (event) {
+    // 判断事件触发元素是否不包含 four_box 类
+    if (!event.target.closest('.four_box') && event.touches.length > 1) {
+        event.preventDefault();
     }
-})
-
-// two_box 第二个li头像和头部导航栏触动事件 end
+}, { passive: false });
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+    // 判断事件触发元素是否不包含 four_box 类
+    if (!event.target.closest('.four_box')) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }
+}, false);
 
 
 
 // 第三层盒子 内置浏览器 begin 
 var btn_ifa = document.querySelector(".btn_ifa"); //获取内置浏览器关闭按钮类
 var four_box = document.querySelector(".four_box"); //获取内置浏览器主盒子类
-var four_box_ifa = document.querySelector(".four_box_ifa"); //获取ifa浏览器类
-var four_box_img = document.querySelector(".four_box_img"); //获取img内置横屏图片类
-var four_box_suimg = document.querySelector(".four_box_suimg"); //获取img内置竖屏图片类
+var four_box_suimg = document.querySelector(".four_box_suimg"); //获取img内置竖屏+竖屏图片类
 
 
-btn_ifa.onclick = function () {
-    four_box_ifa.src = "https://player.bilibili.com/player.html?isOutside=true&aid=113713906455170&bvid=BV1QgCYY4EtA&cid=27529775729&p=1";
+btn_ifa.addEventListener('click', function () {
+    document.body.style.zoom = 1;
     four_box.style.display = "none";
-    four_box_ifa.style.display = "none";
-    four_box_img.style.display = "none";
-    four_box_suimg.style.display = "none";
-    four_box_img.src = "";
     four_box_suimg.src = "";
-}
+});
 
 // 第三层盒子 内置浏览器 end
 
 
 // 内容区域，长文本显示和隐藏begin
-var three_box_box_text = document.getElementsByClassName("three_box_box_text"); //获取内容文本类
+// var three_box_box_text = document.getElementsByClassName("three_box_box_text"); //获取内容文本类
 
-document.querySelectorAll('.quanwen').forEach(function (element) {
-    element.addEventListener('click', function () {
-        // 移除所有元素的 'active' 类
-        document.querySelectorAll('.quanwen').forEach(function (el) {
-            el.classList.remove('active');
-        });
-        // 给被点击的元素添加 'active' 类
-        this.classList.add('active');
-    });
+// document.querySelectorAll('.quanwen').forEach(function (element) {
+//     element.addEventListener('click', function () {
+//         // 移除所有元素的 'active' 类
+//         document.querySelectorAll('.quanwen').forEach(function (el) {
+//             el.classList.remove('active');
+//         });
+//         // 给被点击的元素添加 'active' 类
+//         this.classList.add('active');
+//     });
+// });
+
+const textElement = document.querySelector('.three_box_box_text');
+const expandButton = document.querySelector('.expand');
+const shouQiButton = document.querySelector('.shouQi');
+
+expandButton.addEventListener('click', function () {
+    textElement.classList.add('expanded');
+    expandButton.style.display = 'none';
+    shouQiButton.style.display = 'inline-block';
+});
+
+shouQiButton.addEventListener('click', function () {
+    textElement.classList.remove('expanded');
+    expandButton.style.display = 'inline-block';
+    shouQiButton.style.display = 'none';
 });
 // 内容区域，长文本显示和隐藏begin
 
+
+
+
+// loader.js 完整代码
+(function () {
+    // 1. 立即创建加载提示
+    const statusEl = document.createElement('div');
+    statusEl.id = 'load-status';
+    statusEl.innerHTML = `
+        <span class="wave-text">
+      <span>i</span><span>m</span><span>a</span><span>g</span><span>e</span><span>B</span><span>i</span><span>n</span><span>d</span><span>i</span><span>n</span><span>g</span><span>s</span><span>.</span><span>j</span><span>s</span><span>正</span><span>在</span><span>加</span><span>载</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+      <span class="dot">·</span>
+    </span>
+        `;
+    document.body.appendChild(statusEl);
+
+    // 2. 创建独立script标签加载主文件
+    const script = document.createElement('script');
+    script.src = './pengyouquan_js/imageBindings/imageBindings.js?v=2025_2_16';
+
+    // 3. 监听加载过程
+    let loaded = 0;
+    const startTime = Date.now();
+
+    script.onload = () => {
+        statusEl.innerHTML = `
+        <span class="wave-text loaded-text">
+          imageBindings.js已加载完成！✓
+        </span>
+      `;
+        setTimeout(() => {
+            statusEl.style.opacity = '0';
+            setTimeout(() => statusEl.remove(), 500);
+        }, 2000);
+    };
+
+    // 4. 高频模拟进度（实际项目需用XHR获取真实进度）
+    const progressSimulator = setInterval(() => {
+        if (loaded >= 100) clearInterval(progressSimulator);
+        loaded = Math.min(100, loaded + Math.random() * 3);
+    }, 50);
+
+    // 5. 开始加载主文件
+    document.head.appendChild(script);
+})();
