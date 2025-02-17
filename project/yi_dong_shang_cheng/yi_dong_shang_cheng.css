@@ -139,7 +139,7 @@
     /* 灰色背景，50% 透明度 */
     position: fixed;
     top: 40px;
-    z-index: 1;
+    z-index: 999;
     max-width: 640px;
     display: none;
     cursor: pointer;
