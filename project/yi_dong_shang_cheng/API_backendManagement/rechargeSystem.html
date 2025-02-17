@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Gist 数据管理</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        #totalAmount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'rechargeAmount')">Recharge Amount</button>
+        <button class="tablinks" onclick="openTab(event, 'logDate')">Log Date</button>
+    </div>
+
+    <div id="rechargeAmount" class="tabcontent">
+        <button onclick="addNewCard()">新增</button>
+        <ul id="rechargeList"></ul>
+    </div>
+
+    <div id="logDate" class="tabcontent">
+        <p id="totalAmount"></p>
+        <ul id="logList"></ul>
+    </div>
+
+    <div id="popup" class="popup"></div>
+
+    <script>
+        // 对 GITHUB_TOKEN 进行 Base64 解码
+        const AERO_apen25_2_6 = 'LzAvZ2l0aHViX3BhdF8xMUJONFFGUkEwa2ZmV00zbHJkZTc4XzJXSHBqMkdCZ2dCYjVRcEVJekN3Q245TDVxT2U3UjNUblBtVHNuOWVlTklKSFNRQk1IRGJPSWhXanQz';
+        const GITHUB_TOKEN_recharge_popup = atob(AERO_apen25_2_6).replace('/0/', '');
+
+        // 定义 Gist 相关信息
+        const GIST_CONFIG = {
+            rechargeAmount: {
+                id: '0dcc63159a35bfc1412918abb9f94ea4',
+                fileName: 'html_rechargeAmount.txt'
+            },
+            logDate: {
+                id: 'ad268ed6363d959c587fa9328ffa245c',
+                fileName: 'html_rechargeAmount_logDate.txt'
+            }
+        };
+
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+            if (tabName === 'rechargeAmount') {
+                loadRechargeData();
+            } else if (tabName === 'logDate') {
+                loadLogData();
+            }
+        }
+
+        function loadRechargeData() {
+            const { id, fileName } = GIST_CONFIG.rechargeAmount;
+            const url = `https://api.github.com/gists/${id}`;
+            fetch(url, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_recharge_popup}`
+                }
+            })
+              .then(response => response.json())
+              .then(data => {
+                    const content = data.files[fileName].content;
+                    const cards = JSON.parse(content);
+                    const list = document.getElementById('rechargeList');
+                    list.innerHTML = '';
+                    cards.reverse().forEach(card => {
+                        const li = document.createElement('li');
+                        li.textContent = card.卡号;
+                        const copyBtn = document.createElement('button');
+                        copyBtn.textContent = '复制';
+                        copyBtn.onclick = () => copyCard(card.卡号);
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.textContent = '删除';
+                        deleteBtn.onclick = () => deleteCard(card.卡号);
+                        li.appendChild(copyBtn);
+                        li.appendChild(deleteBtn);
+                        list.appendChild(li);
+                    });
+                });
+        }
+
+        function addNewCard() {
+            const { id, fileName } = GIST_CONFIG.rechargeAmount;
+            const url = `https://api.github.com/gists/${id}`;
+            fetch(url, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_recharge_popup}`
+                }
+            })
+              .then(response => response.json())
+              .then(data => {
+                    const content = data.files[fileName].content;
+                    const cards = JSON.parse(content);
+                    let newCard;
+                    do {
+                        const year = new Date().getFullYear();
+                        const randomNum = String(Math.floor(Math.random() * 900) + 100);
+                        newCard = `JY${year}${randomNum}_100`;
+                    } while (cards.some(card => card.卡号 === newCard));
+                    cards.unshift({ 卡号: newCard });
+                    const newContent = JSON.stringify(cards);
+                    const updateData = {
+                        files: {
+                            [fileName]: {
+                                content: newContent
+                            }
+                        }
+                    };
+                    fetch(url, {
+                        method: 'PATCH',
+                        headers: {
+                            Authorization: `token ${GITHUB_TOKEN_recharge_popup}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(updateData)
+                    })
+                      .then(() => {
+                            showPopup('新增卡号成功！');
+                            loadRechargeData();
+                        });
+                });
+        }
+
+        function copyCard(card) {
+            navigator.clipboard.writeText(card)
+              .then(() => {
+                    showPopup('复制卡号成功！');
+                });
+        }
+
+        function deleteCard(card) {
+            const { id, fileName } = GIST_CONFIG.rechargeAmount;
+            const url = `https://api.github.com/gists/${id}`;
+            fetch(url, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_recharge_popup}`
+                }
+            })
+              .then(response => response.json())
+              .then(data => {
+                    const content = data.files[fileName].content;
+                    const cards = JSON.parse(content);
+                    const newCards = cards.filter(c => c.卡号!== card);
+                    const newContent = JSON.stringify(newCards);
+                    const updateData = {
+                        files: {
+                            [fileName]: {
+                                content: newContent
+                            }
+                        }
+                    };
+                    fetch(url, {
+                        method: 'PATCH',
+                        headers: {
+                            Authorization: `token ${GITHUB_TOKEN_recharge_popup}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(updateData)
+                    })
+                      .then(() => {
+                            showPopup('删除卡号成功！');
+                            loadRechargeData();
+                        });
+                });
+        }
+
+        function loadLogData() {
+            const { id, fileName } = GIST_CONFIG.logDate;
+            const url = `https://api.github.com/gists/${id}`;
+            fetch(url, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_recharge_popup}`
+                }
+            })
+              .then(response => response.json())
+              .then(data => {
+                    const content = data.files[fileName].content;
+                    const logs = JSON.parse(content);
+                    const total = logs.reduce((sum, log) => sum + log.amount, 0);
+                    const totalAmountElement = document.getElementById('totalAmount');
+                    totalAmountElement.textContent = `营利余额: ${total} 元`;
+                    const list = document.getElementById('logList');
+                    list.innerHTML = '';
+                    logs.reverse().forEach(log => {
+                        const li = document.createElement('li');
+                        li.textContent = `账号: ${log.account}, 卡号: ${log.card}, 金额: ${log.amount}`;
+                        list.appendChild(li);
+                    });
+                });
+        }
+
+        function showPopup(message) {
+            const popup = document.getElementById('popup');
+            popup.textContent = message;
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }
+
+        // 默认打开 Recharge Amount 页面
+        document.getElementsByClassName("tablinks")[0].click();
+
+
+
+// 禁用选中状态
+document.addEventListener("selectstart", function (e) {
+    e.preventDefault();
+})
+
+// 禁用双击变大
+document.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+    var now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
+    </script>
+</body>
+
+</html>

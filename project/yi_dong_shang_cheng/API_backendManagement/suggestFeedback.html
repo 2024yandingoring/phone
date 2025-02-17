@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-n">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#filter-input {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+#filter-button {
+    padding: 8px 16px;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#data-table th,
+#data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #f2f2f2;
+}
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+}
+
+#delete-selected {
+    padding: 8px 16px;
+    margin-top: 20px;
+}
+</style>
+
+<body>
+    <input type="text" id="filter-input" placeholder="按用户筛选">
+    <button id="filter-button">筛选</button>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th>序号</th>
+                <th>用户</th>
+                <th>联系方式</th>
+                <th>反馈内容</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="pagination"></div>
+    <button id="delete-selected">删除选中</button>
+    <!-- <script src="admin.js"></script> -->
+</body>
+<script>
+// GitHub 相关配置
+// 定义 AERO 变量
+const AERO_apen2 = 'LzAvZ2l0aHViX3BhdF8xMUJONFFGUkEwa2ZmV00zbHJkZTc4XzJXSHBqMkdCZ2dCYjVRcEVJekN3Q245TDVxT2U3UjNUblBtVHNuOWVlTklKSFNRQk1IRGJPSWhXanQz';
+
+// 对 GITHUB_TOKEN 进行 Base64 解码
+const decoded_open2 = atob(AERO_apen2);
+
+// 去掉前面的 /0/
+const result_open2 = decoded_open2.replace('/0/', '');
+
+const GITHUB_TOKEN_feedback_popup = result_open2;
+const GIST_ID_feedback_popup = '22cbbf0d4be63730b4a221b66aad7d51';
+const FILE_NAME = 'html_suggestFeedback.txt';
+
+const tableBody = document.querySelector('#data-table tbody');
+const paginationDiv = document.getElementById('pagination');
+const filterInput = document.getElementById('filter-input');
+const filterButton = document.getElementById('filter-button');
+const selectAllCheckbox = document.getElementById('select-all');
+const deleteSelectedButton = document.getElementById('delete-selected');
+
+let allData = [];
+let filteredData = [];
+let indexMapping = []; // 用于存储筛选后数据与原始数据的索引映射
+const itemsPerPage = 20;
+let currentPage = 1;
+
+// 获取 Gist 数据
+async function fetchGistData() {
+    try {
+        const response = await fetch(`https://api.github.com/gists/${GIST_ID_feedback_popup}`, {
+            headers: {
+                Authorization: `token ${GITHUB_TOKEN_feedback_popup}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`请求失败，状态码: ${response.status}`);
+        }
+
+        const gistData = await response.json();
+        const content = gistData.files[FILE_NAME]?.content || '';
+        allData = content.split('\n').filter(line => line.trim()!== '').reverse();
+        filteredData = [...allData];
+        indexMapping = allData.map((_, index) => index); // 初始映射
+        displayData();
+    } catch (error) {
+        console.error('获取数据失败:', error);
+    }
+}
+
+// 显示数据
+function displayData() {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentData = filteredData.slice(startIndex, endIndex);
+
+    tableBody.innerHTML = '';
+    currentData.forEach((line, index) => {
+        const realIndex = indexMapping[startIndex + index];
+        const [user, contact, feedback] = line.split(', ').map(item => item.split(': ')[1]);
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><input type="checkbox" data-index="${realIndex}"></td>
+            <td>${startIndex + index + 1}</td>
+            <td>${user}</td>
+            <td>${contact}</td>
+            <td>${feedback}</td>
+            <td><button onclick="deleteSingleRow(${realIndex})">删除</button></td>
+        `;
+        tableBody.appendChild(row);
+    });
+
+    displayPagination();
+}
+
+// 显示分页按钮
+function displayPagination() {
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+    paginationDiv.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        if (i === currentPage) {
+            button.disabled = true;
+        }
+        button.addEventListener('click', () => {
+            currentPage = i;
+            displayData();
+        });
+        paginationDiv.appendChild(button);
+    }
+}
+
+// 筛选数据
+function filterData() {
+    const keyword = filterInput.value.trim();
+    if (keyword === '') {
+        filteredData = [...allData];
+        indexMapping = allData.map((_, index) => index); // 恢复原始映射
+    } else {
+        const newFilteredData = [];
+        const newIndexMapping = [];
+        allData.forEach((line, index) => {
+            const user = line.split(', ')[0].split(': ')[1];
+            if (user.includes(keyword)) {
+                newFilteredData.push(line);
+                newIndexMapping.push(index);
+            }
+        });
+        filteredData = newFilteredData;
+        indexMapping = newIndexMapping;
+    }
+    currentPage = 1;
+    displayData();
+}
+
+// 删除单条数据
+async function deleteSingleRow(index) {
+    const confirmDelete = confirm('确定要删除这条数据吗？');
+    if (confirmDelete) {
+        allData.splice(index, 1);
+        // 更新筛选后的数据和索引映射
+        filteredData = allData.filter((_, i) => indexMapping.includes(i));
+        indexMapping = indexMapping.filter(mappedIndex => mappedIndex!== index).map(mappedIndex => mappedIndex > index? mappedIndex - 1 : mappedIndex);
+        const newContent = allData.reverse().join('\n');
+        try {
+            const updateResponse = await fetch(`https://api.github.com/gists/${GIST_ID_feedback_popup}`, {
+                method: 'PATCH',
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_feedback_popup}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    files: {
+                        [FILE_NAME]: {
+                            content: newContent
+                        }
+                    }
+                })
+            });
+
+            if (!updateResponse.ok) {
+                throw new Error(`更新 Gist 失败，状态码: ${updateResponse.status}`);
+            }
+
+            currentPage = 1;
+            displayData();
+        } catch (error) {
+            console.error('删除数据失败:', error);
+        }
+    }
+}
+
+// 全选/全不选
+selectAllCheckbox.addEventListener('change', () => {
+    const checkboxes = tableBody.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = selectAllCheckbox.checked;
+    });
+});
+
+// 删除选中数据
+deleteSelectedButton.addEventListener('click', async () => {
+    const checkboxes = tableBody.querySelectorAll('input[type="checkbox"]:checked');
+    const selectedIndices = Array.from(checkboxes).map(checkbox => parseInt(checkbox.dataset.index));
+    const confirmDelete = confirm('确定要删除选中的数据吗？');
+    if (confirmDelete) {
+        selectedIndices.sort((a, b) => b - a).forEach(index => {
+            allData.splice(index, 1);
+        });
+        // 更新筛选后的数据和索引映射
+        filteredData = allData.filter((_, i) => indexMapping.includes(i));
+        indexMapping = indexMapping.filter(mappedIndex =>!selectedIndices.includes(mappedIndex)).map(mappedIndex => {
+            const deletedCount = selectedIndices.filter(deletedIndex => deletedIndex < mappedIndex).length;
+            return mappedIndex - deletedCount;
+        });
+        const newContent = allData.reverse().join('\n');
+        try {
+            const updateResponse = await fetch(`https://api.github.com/gists/${GIST_ID_feedback_popup}`, {
+                method: 'PATCH',
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN_feedback_popup}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    files: {
+                        [FILE_NAME]: {
+                            content: newContent
+                        }
+                    }
+                })
+            });
+
+            if (!updateResponse.ok) {
+                throw new Error(`更新 Gist 失败，状态码: ${updateResponse.status}`);
+            }
+
+            currentPage = 1;
+            displayData();
+        } catch (error) {
+            console.error('删除数据失败:', error);
+        }
+    }
+}
+);
+
+// 初始化
+filterButton.addEventListener('click', filterData);
+fetchGistData();
+
+
+
+
+// 禁用选中状态
+document.addEventListener("selectstart", function (e) {
+    e.preventDefault();
+})
+
+// 禁用双击变大
+document.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, { passive: false });
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+    var now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    }
+    lastTouchEnd = now;
+}, false);
+</script>
+</html>
