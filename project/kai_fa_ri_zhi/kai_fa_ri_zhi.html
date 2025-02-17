@@ -25,10 +25,37 @@
         .box_box {
             width: 100%;
             height: 100%;
-            /* text-align: center; */
-            display: grid;
-            place-items: center;
-            /* 水平垂直居中 */
+            background-color: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* visibility: hidden;
+    opacity: 0; */
+            transition: opacity 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            overflow-y: scroll;
+            /*css ul滑动 */
+        }
+
+        .box_box_max {
+            background-color: #fff;
+            /* border-radius: 10px; */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 640px;
+            /* overflow: hidden; */
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            /* padding: 0 20px; */
         }
 
         /* 自适应盒子 end  */
@@ -128,7 +155,8 @@
         .every_oe_kuozhan {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* 灰色背景，50% 透明度 */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 灰色背景，50% 透明度 */
             transition: opacity 0.3s ease;
             /* 灰色背景，50% 透明度 */
             position: fixed;
@@ -217,7 +245,7 @@
 
         .two_box li {
             width: 100%;
-/*             padding-bottom: 10px; */
+            /* padding-bottom: 10px; */
         }
 
         .time {
@@ -229,7 +257,7 @@
 
         .content_box {
             width: calc(100% - 10px);
-/*             height: 173px; */
+            /* height: 180px; */
             margin-left: 5px;
             border-radius: 5px;
             margin-top: 10px;
@@ -262,7 +290,7 @@
             white-space: nowrap;
             margin-top: 10px;
             color: #cfd0d8;
-             padding-bottom: 20px;
+            padding-bottom: 10px;
         }
 
         .bottom_zhushi {
@@ -276,7 +304,6 @@
             position: absolute;
             right: 20px;
         }
-
 
         /* 第二层主盒子 内容区域 end */
 
@@ -306,107 +333,51 @@
 <body>
     <!-- 自适应盒子 -->
     <div class="box_box">
-        <!-- 第一层主盒子 用来固定里面的元素超出隐藏 -->
-        <div class="one_box">
-            <!-- 头部导航栏 -->
-            <div class="one_box_li_head">
-                <div class="onn">开发日志</div>
-                <div class="enn"></div>
-                <!-- 小程序通用的按钮 -->
-                <div class="every_oe">
-                    <div class="oen"></div>
-                    <div class="eon"></div>
+        <!-- 自适应主盒子  -->
+        <div class="box_box_max">
+            <!-- 第一层主盒子 用来固定里面的元素超出隐藏 -->
+            <div class="one_box">
+                <!-- 头部导航栏 -->
+                <div class="one_box_li_head">
+                    <div class="onn">开发日志</div>
+                    <div class="enn"></div>
+                    <!-- 小程序通用的按钮 -->
+                    <div class="every_oe">
+                        <div class="oen"></div>
+                        <div class="eon"></div>
+                    </div>
+                    <!-- 内置文本关闭按钮 -->
+                    <span class="btn">&lt;</span>
                 </div>
-                <!-- 内置文本关闭按钮 -->
-                <span class="btn">&lt;</span>
-            </div>
-            <!-- 扩展项目 -->
-            <div class="every_oe_kuozhan">
-                <!-- 三角型 -->
-                <div></div>
-                <ul class="every_oe_kuozhan_ul">
-                    <!-- top_li是当前位置颜色，<span>▲</span>是符号当前位置 -->
-                    <a href="../../index.html">
-                        <li>朋友圈</li>
-                    </a>
-                    <a href="./kai_fa_ri_zhi.html">
-                        <li class="top_li">开发日志<br><span>▲</span></li>
-                    </a>
-                    <a href="../yi_dong_shang_cheng/yi_dong_shang_cheng.html">
-                        <li>移动商城<br></li>
-                    </a>
-                    <li>移动新闻</li>
-                    <li>移动应用</li>
+                <!-- 扩展项目 -->
+                <div class="every_oe_kuozhan">
+                    <!-- 三角型 -->
+                    <div></div>
+                    <ul class="every_oe_kuozhan_ul">
+                        <!-- top_li是当前位置颜色，<span>▲</span>是符号当前位置 -->
+                        <a href="../../index.html">
+                            <li>朋友圈</li>
+                        </a>
+                        <a href="./kai_fa_ri_zhi.html">
+                            <li class="top_li">开发日志<br><span>▲</span></li>
+                        </a>
+                        <a href="../yi_dong_shang_cheng/yi_dong_shang_cheng.html">
+                            <li>移动商城<br></li>
+                        </a>
+                        <li>移动新闻</li>
+                        <li>移动应用</li>
+                    </ul>
+                </div>
+                <!-- 第二层主盒子 内容区域 -->
+                <ul class="two_box">
+
+
                 </ul>
+                <!-- 第三层主盒子 内置文本 -->
+                <ul class="three_box">我是文本内容</ul>
             </div>
-            <!-- 第二层主盒子 内容区域 -->
-            <ul class="two_box">
-
-                <!-- phone_yidongshangcheng 日志 -->
-                <li>
-                    <!-- 时间 -->
-                    <div class="time">25/1/13 下午15:19</div>
-                    <!-- 内容盒子 -->
-                    <div class="content_box phone_yidongshangcheng">
-                        <!-- 来源于账号-->
-                        <div class="content_id">admin</div>
-                        <!-- 标题 -->
-                        <div class="content_title">手机端商城</div>
-                        <!-- 内容  -->
-                        <div class="content_content">
-                            <div class="content_content_inthetop">手机端商城_in_2025.1.13开发成立</div>Content Time
-                            ==>手机端商城_in_2025.1.13更新了
-                        </div>
-                        <!-- 底部注释 -->
-                        <div class="bottom_zhushi">日志详情<span>></span></div>
-                    </div>
-                </li>
-
-                <!-- phone_pengyouquan 日志 -->
-                <li>
-                    <!-- 时间 -->
-                    <div class="time">25/1/2 上午00:00</div>
-                    <!-- 内容盒子 -->
-                    <div class="content_box phone_pengyouquan">
-                        <!-- 来源于账号-->
-                        <div class="content_id">admin</div>
-                        <!-- 标题 -->
-                        <div class="content_title">手机端朋友圈</div>
-                        <!-- 内容  -->
-                        <div class="content_content">
-                            <div class="content_content_inthetop">手机端朋友圈_in_2024.12.23（移植版上线）</div>Content Time
-                            ==>手机端朋友圈_in_2024.12.29更新了和Content Time ==>手机端朋友圈_in_2025.1.1更新了
-                        </div>
-                        <!-- 底部注释 -->
-                        <div class="bottom_zhushi">日志详情<span>></span></div>
-                    </div>
-                </li>
-
-                <!-- pc_boke 日志  -->
-                <li>
-                    <!-- 时间 -->
-                    <div class="time">22/2/26 下午6:45</div>
-                    <!-- 内容盒子 -->
-                    <div class="content_box pc_boke">
-                        <!-- 来源于账号-->
-                        <div class="content_id">admin</div>
-                        <!-- 标题 -->
-                        <div class="content_title">电脑端博客</div>
-                        <!-- 内容  -->
-                        <div class="content_content">
-                            <div class="content_content_inthetop">大二开始研发，2024/12月底停止更新维护。</div>Content Time
-                            ==>电脑端博客_in_2024/12/23更新了和Content Time ==>电脑端博客_in_2024/12/9更新了和Content Time
-                            ==>电脑端博客_in_2024/12/1更新了和Content Time ==>电脑端博客_in_2023/4/7更新了
-                        </div>
-                        <!-- 底部注释 -->
-                        <div class="bottom_zhushi">日志详情<span>></span></div>
-                    </div>
-                </li>
-
-            </ul>
-            <!-- 第三层主盒子 内置文本 -->
-            <ul class="three_box">我是文本内容</ul>
         </div>
+
     </div>
 </body>
 <script>
@@ -439,41 +410,91 @@
     }
     // every_oe 小程序通用按钮 点击事件 end
 
-    // pc_boke 日志 begin
-    var pc_boke = document.querySelector(".pc_boke"); //获取pc_boke日志类
-    var pc_boke_txt = "Content Time ==>电脑端博客_in_2024/12/23<br>1.pc端博客停止更新维护，后期只用来辅助开发。<br>2.移植到移动端“朋友圈”。<br><br>Content Time ==>电脑端博客_in_2024/12/9<br>1.优化内置浏览器视频播放算法。<br>2.尝试与抖音外链相互兼容。<br>3.快手外链完美适配。<br><br>Content Time ==>电脑端博客_in_2024/12/1<br>1.去除了内置浏览器中的相册展示功能（上下左右偏移）。<br>2.新增内置浏览器中的相册展示功能（适应全屏、恢复自适应）。<br>3.新增底部导航分页2024。<br>4.新增博客内置浏览器视频播放功能。<br><br>Content Time ==>电脑端博客_in_2023/4/7<br>1.更新了我的工作内容和功能。<br>2.优化了我的相册底部背景颜色和第一排顶部展示位置。<br><br>Content Time ==>电脑端博客_in_2023/4/5<br>1.更新我的相册内容和功能。<br>2.修复了已知的bug。<br>3.移植了内置图片展示到我的博客功能内，后续不在新增页面的形式展示图片。<br><br>Content Time ==>电脑端博客_in_2023/4/3<br>1.修复了已知的bug。<br><br>Content Time ==>电脑端博客_in_2023/4/2<br>1.新增了登录博客页面登录授权本站信息与责任。<br>2.更新了免责声明条款说明。<br><br>Content Time ==>电脑端博客_in_2023/2/14<br>1.去除左边博客快捷导航，新增博文底部页码。<br>2.将本地图片全部上传到QQ服务器，解决图片加载缓存时间长的问题。<br><br>Content Time ==>电脑端博客_in_2023/2/7<br>1.新增了内置浏览器点击更新内容的功能。<br>2.去除了垂直浏览器的滚动条，内置浏览器除外。<br><br>Content Time ==>电脑端博客_in_2023/1/27<br>1.线上版由于经费不足而停止开发，为完善后面服务在服务器运营期间完成移植单机版。<br>2.移除多项后台与前端接口，对资料和导航栏描述进行了整改，将原来的页码导航栏整改成个性标签。<br>3.将后端的更新日志，移植到了前端底部注释处。<br>4.移除了回顶部功能，后期所有页面由内置浏览器独立完成。<br>5.新增了我的博客分类导航栏。<br>6.新增了附件功能，在原来的点赞转发处。<br><br>Content Time ==>电脑端博客_in_2022/5/3<br>1.更新了资料修改功能。<br>2.新增js自动增加版本号功能。<br><br>Content Time ==>电脑端博客_in_2022/5/2<br>1.优化后端log-UI，新增日志功能。<br>2.新增前端底部注释统一年份功能。<br>3.更新了留言日志功能。<br>4.更新了反馈日志功能。";
 
-    pc_boke.onclick = function () {
-        btn.style.display = "block";
-        three_box.style.display = "block"; //内置文本盒子
-        two_box.style.display = "none"; //内容区域盒子
-        three_box.innerHTML = pc_boke_txt;
-    }
-    // pc_boke 日志 end
+    // 禁用选中状态
+    document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+    })
 
-    // phone_pengyouquan 日志 begin
-    var phone_pengyouquan = document.querySelector(".phone_pengyouquan"); //获取pc_boke日志类
-    var phone_pengyouquan_txt = "Content Time ==>手机端朋友圈_in_2025.1.13<br>1.修复已知问题。<br><br>Content Time ==>手机端朋友圈_in_2025.1.1<br>1.修复了,安卓微信和苹果微信文本内容显示高度问题，原来的60px改成了63px。<br>2.新增功能，扩展内容区域描述锚点，主体文本呈黑色，底部是蓝牙三角形。<br>3.优化了，扩展区域背景颜色和宽度为100%。<br><br>Content Time ==>手机端朋友圈_in_2024.12.29<br>1.扩展内容，文本跟随安卓微信，苹果微信统一居中，去除了line-height，替换为padding-top像素文本居中，这样就会固定盒子大小使文本居中。<br>2.video视频链接，统一采用b站外链，去除快手、抖音外链，b站外链除了清晰度不太好，完美适配安卓、苹果、pc端。<br>3.内容展示区域，修复了4宫格太大的bug，现在会跟随9宫格的大小进行拼整4宫格。<br>4.新增功能（超长文本隐藏，点击后显示），遍历同类名绑定事件先进行一个所有同类绑定事件删除，在单独设置被点击的元素hight，auto。<br><br>Content Time ==>手机端朋友圈_in_2024.12.23（移植版上线）,移植了pc端的博客网站到移动端，目前能适配Android、apple、pc。ios平板不适配，安卓平板未测试，虽然完成了初始界面基本适配，但小细节还有很多没做到的，比如四宫格超级大，不符合美感、快手视频外链苹果微信界面无法播放，pc端视频外链播放也有很多问题，都存在技术攻关等难题，也许后面会随着时间慢慢想办法尝试修复吧。每次都隔挺长时间才更新的，所以代码有时候看起来清晰美感，有时候乱糟糟找不到逻辑，东墙补西墙。<br>1.逻辑建设，关于十万条数据渲染问题，采用了最原始的“display，none”和js渲染，可以有效缓解页面加载。分为html==>十条数据为一层，只建立标签，无数据；js==>分三层，第一层是数据的绑定事件js，第二层是display，none遍历隐藏层，第三层是display，block显示层、Dom元素修改层。<br>2.UI界面，模仿了微信朋友圈UI，按个人理解，内容区域逐个分层，头像分为单独的block，id名分为单独的行内元素，内容区域也分为独立行内元素，图片区域做了三套方案，第一套是单独的150*200像素长方形图片展示；第二套是九宫格，采用180*180像素正方形3列方块图片展示，按屏幕自适应3块，相比以往代码有突出进步和简洁，让高度为0，宽度和底部内边距100%/3，这样就可以自适应；第三套是四宫格，采用了180*180像素正方形2个为一组的组排方块图片展示。<br>3.扩展应用，在导航栏右顶部按钮区域，建立了多个网页应用关联，更加方便浏览所有作品。";
+    // 禁用双击变大
+    document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+    var lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
 
-    phone_pengyouquan.onclick = function () {
-        btn.style.display = "block";
-        three_box.style.display = "block"; //内置文本盒子
-        two_box.style.display = "none"; //内容区域盒子
-        three_box.innerHTML = phone_pengyouquan_txt;
-    }
-    // phone_pengyouquan 日志 end
 
-    // phone_yidongshangcheng 日志 begin
-    var phone_yidongshangcheng = document.querySelector(".phone_yidongshangcheng"); //获取pc_boke日志类
-    var phone_yidongshangcheng_txt = "Content Time ==>手机端朋友圈_in_2025.1.21<br>1.优化了扩展背景颜色，更加主流化。<br>2.修复已知问题。<br><br>Content Time ==>手机端朋友圈_in_2025.1.13<br>1.以盒子模型为基础理念，展开各个元素适配。<br>2.首页数据渲染分层进行渲染，瀑布流商品分为，隐藏层display：none，js；显示层display：“”，js；事件绑定js。<br>3.搜索引擎，用定时器渲染数据并且隐藏盒子，等待关键字被搜索时，显示盒子。<br>4.客服信息窗口，尝试用api接口对接邮箱和ai模型系统<br>5.登录模块，尝试采用本地id文本为数据类型，展开一系列的开发，例如：注册、登录、收藏、历史记录，充值钱包，订单明细。<br>6.商品资料页面，购买和填地址页面，支付页面（提供一种思路，点击购买时将标题文本复制到购买信息界面，然后生成文本id数据类型，显示在登录模块订单明细）。";
+    //动态创建日志
+    fetch('logs.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('网络响应错误');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (!data.logs || !Array.isArray(data.logs)) {
+                throw new Error('logs 数据格式错误');
+            }
 
-    phone_yidongshangcheng.onclick = function () {
-        btn.style.display = "block";
-        three_box.style.display = "block"; //内置文本盒子
-        two_box.style.display = "none"; //内容区域盒子
-        three_box.innerHTML = phone_yidongshangcheng_txt;
-    }
-    // phone_yidongshangcheng 日志 end
+            // 根据 time 字段对日志进行排序
+            data.logs.sort((a, b) => {
+                const parseTime = (timeStr) => {
+                    const [year, month, day, time] = timeStr.split('/');
+                    const [hours, minutes] = time.split(':');
+                    return new Date(`20${year}`, month - 1, day, hours, minutes);
+                };
+
+                const dateA = parseTime(a.time);
+                const dateB = parseTime(b.time);
+                return dateB - dateA; // 降序排序
+            });
+
+            const twoBox = document.querySelector('.two_box');
+            if (!twoBox) {
+                throw new Error('无法找到 .two_box 元素');
+            }
+
+            twoBox.innerHTML = data.logs.map(log => `
+      <li data-log-id="${log.id}">
+        <div class="time">${log.time}</div>
+        <div class="content_box ${log.id}">
+          <div class="content_id">${log.author}</div>
+          <div class="content_title">${log.title}</div>
+          <div class="content_content">${log.summary}</div>
+          <div class="bottom_zhushi">日志详情<span>></span></div>
+        </div>
+      </li>
+    `).join('');
+
+            // 绑定点击事件
+            document.querySelectorAll('.two_box li').forEach(li => {
+                li.addEventListener('click', () => {
+                    const logId = li.dataset.logId;
+                    const logData = data.logs.find(l => l.id === logId);
+
+                    const three_box = document.querySelector('.three_box');
+                    const two_box = document.querySelector('.two_box');
+                    const btn = document.querySelector('.btn');
+
+                    three_box.innerHTML = logData.details;
+                    three_box.style.display = "block";
+                    two_box.style.display = "none";
+                    btn.style.display = "block";
+                });
+            });
+        })
+        .catch(error => {
+            console.error('加载日志数据失败:', error);
+        });
 </script>
 
 </html>
