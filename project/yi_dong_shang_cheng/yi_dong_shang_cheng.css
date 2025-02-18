@@ -3399,4 +3399,8 @@
         margin-left: -20px;
     }
 }
+
+.nameTimestamp{
+    display: none;
+}
 /* bug大合集 */
