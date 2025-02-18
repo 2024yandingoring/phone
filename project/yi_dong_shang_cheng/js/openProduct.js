@@ -178,9 +178,11 @@ openProduct_box_btn.addEventListener('click', () => {
 //  商品点开框架 延升 ==> 我要购买 关闭按钮 事件
 const purchaseDate_btn = document.querySelector('.purchaseDate_btn');
 const purchaseDate_bbt = document.querySelector('.purchaseDate');
+const openProduct_html2 = document.querySelector('.openProduct_html');
 purchaseDate_btn.addEventListener('click', () => {
     purchaseDate_bbt.style.visibility = 'hidden';
     purchaseDate_bbt.style.opacity = '0';
+    openProduct_html.src = '';
 });
 
 
