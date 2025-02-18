@@ -1,5 +1,3 @@
-//搜索引擎
-
 // 获取搜索框、搜索按钮和所有商品项
 const searchInput = document.querySelector('.two_box_sousuo');
 const searchButton = document.querySelector('.sousuo_btn');
@@ -9,23 +7,24 @@ const productItems = document.querySelectorAll('.waterfallFlow_box_min');
 searchButton.addEventListener('click', function () {
     const searchText = searchInput.value.trim().toLowerCase();
 
-    // 如果搜索框为空，显示所有商品项
-    if (searchText === '') {
-        productItems.forEach(item => {
-            item.style.display = 'block';
-        });
-    } else {
-        // 先隐藏所有商品项
-        productItems.forEach(item => {
-            item.style.display = 'none';
-        });
+    // 先隐藏所有商品项
+    productItems.forEach(item => {
+        item.style.display = 'none';
+    });
 
-        // 遍历每个商品项，查找匹配的关键字
+    // 若搜索框不为空，进行搜索匹配
+    if (searchText!== '') {
         productItems.forEach(item => {
             const searchTitle = item.querySelector('.searchBox_title').textContent.toLowerCase();
-            if (searchTitle.includes(searchText)) {
+            // 检查是否包含当前搜索关键字或关键字为“搜索”
+            if (searchTitle.includes(searchText) || searchTitle.includes('搜索')) {
                 item.style.display = 'block';
             }
+        });
+    } else {
+        // 若搜索框为空，显示所有商品项
+        productItems.forEach(item => {
+            item.style.display = 'block';
         });
     }
 });
