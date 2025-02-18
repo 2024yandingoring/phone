@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-n">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="never">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎回来-welcome back</title>
+    <link rel="icon"
+        href="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa1S9Wqv/LiySpxowE0yeWXwBdXN*SQ1LaTAUt2.qD8TVp4kGYP.rusDvjNtf3HcvouWnfum.Cpg3E1BbkxryYw3AqR9A7uoLy2zn.leG7RTzWv3u8DA!/mnull&bo=yADIAMgAyAADByI!&rf=photolist&t=5">
+    <link rel="stylesheet" href="../../../mr.css">
+    <style>
+        /* 核心样式 */
+        .slide-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            /* 限制最大宽度为 640px */
+            height: 400px;
+            /* 固定高度，可根据需要调整 */
+            margin: 0 auto;
+            /* 居中显示 */
+            overflow: hidden;
+        }
+
+        .slide-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slide-item {
+            flex: 0 0 100%;
+            /* 关键：每个项占满容器宽度 */
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            /* 填充模式 (可选 contain/cover) */
+            object-position: center;
+        }
+
+        /* 其他样式 */
+        .box_box {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .box_box_max {
+            background: white;
+            width: 100%;
+            max-width: 640px;
+            height: 100%;
+            position: relative;
+            overflow-y: scroll;
+        }
+
+        .slide-indicator {
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        /* 商品信息容器，设置背景、内边距、圆角和阴影 */
+        .product-info {
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 8px;
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+            margin: 5px;
+        }
+
+        /* 价格展示样式 */
+        .priceBox {
+            color: #E12D24;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 价格中的小单位样式 */
+        .priceBox span {
+            font-size: 28px;
+            font-weight: normal;
+        }
+
+        /* 平台保障样式 */
+        .platformAssurance {
+            color: #3FA635;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            background-color: #EDF9ED;
+            padding: 5px 5px;
+        }
+
+
+
+        /* 产品标题样式 */
+        .productTitle {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 5px;
+        }
+
+        /* 品牌名称样式 */
+        .brandNme {
+            font-size: 12px;
+            color: #FFE4DD;
+            font-weight: bold;
+            background-color: #303037;
+            padding: 2px 5px;
+            border-radius: 2px;
+        }
+
+        /* 辅助显示列表样式 */
+        .auxiliaryDisplay {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* 添加底部阴影效果 */
+        }
+
+        /* 辅助显示列表项样式 */
+        .auxiliaryDisplay li {
+            color: #666;
+            font-size: 14px;
+            height: 25px;
+            margin-bottom: 10px;
+            /* 增加底部外边距，让阴影不重叠 */
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            /* 使子元素在水平方向两端对齐 */
+            padding: 0;
+            /* 增加内边距，让内容与阴影有间隔 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 1.2);
+            /* 为每个列表项添加阴影 */
+            border-radius: 4px;
+            /* 可选：添加圆角，让样式更美观 */
+        }
+
+        /* 辅助显示列表项中的箭头样式 */
+        .auxiliaryDisplay li span {
+            color: #999;
+            margin-left: 5px;
+            position: absolute;
+            right: 15px;
+        }
+
+        /* 辅助显示列表项前添加小图标（用伪元素模拟） */
+        .auxiliaryDisplay li::before {
+            content: '✓';
+            color: #00B51D;
+            font-size: 16px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .shopContainer {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .shopHead {
+            width: 50px;
+            height: 50px;
+        }
+
+        .shopInfo {
+            margin-left: 5px;
+        }
+
+        .shoptitle {
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .officialVersion {
+            color: #5D0200;
+            margin-left: 5px;
+            background-color: #F9D88F;
+            padding: 2px 5px;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+
+        .shopAddress {
+            display: block;
+            text-align: left;
+            color: #666;
+            font-size: 13px;
+        }   
+
+        /* 店铺辅助提示盒子样式 */
+        .shopAssistantHintBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 10px;
+            padding: 10px 0;
+            background-color: #EDF1F0;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        /* 左边提示文字样式 */
+        .shopAssistantHintLeft {
+            font-size: 14px;
+            font-weight: 600;
+            color: #343a40;
+            margin-left: 10px;
+        }
+
+        /* 右边提示文字样式 */
+        .shopAssistantHintRight {
+            font-size: 14px;
+            color: #6c757d;
+            margin-right: 5px;
+        }
+
+        /* 分割线样式 */
+        .shopAssistantHintRight span {
+            margin: 0 8px;
+            color: #ced4da;
+        }
+
+        /* 鼠标悬停效果 */
+        .shopAssistantHintBox:hover {
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease;
+        }
+
+        .detailImage {
+            padding: 0 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .detailImage img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_box">
+        <div class="box_box_max">
+            <!-- 图片顶部展示  -->
+            <div class="slide-container">
+                <div class="slide-track">
+                    <img class="slide-item" src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*Se*QrgCJ6SnAME3GaWdaSkRi0zGEkO.5cxhe3AqzsImZnZ0PYnLnKIaErST5I3JDRonphlr73iJZiZhYAOsu8Qo!/photolist&t=5">
+                    <img class="slide-item" src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*Sd9NIOBxhwK4o1zYwR0Sb9Nfg7BinVviMtxp2Tz1H0.Txi9T7935izNMHh7ZPPAi4E4rwclgITMS4GXPwwuYqWQ!/photolist&t=5">
+                    <img class="slide-item" src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*SfvLYDj0IT2B3AzW98HjYDcqFDMoEBQMm8*YwvDnXRwkIp4DT0Q0DmX7OeZPgyyngq0oadEm0srVnCzT2b0zF.8!/photolist&t=5">
+                    <img class="slide-item" src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*SZNOayZiSiUxJ4fx4q3MQxJID1jrvJhURBidhWPrGslsjRUjQbIuZbWXUhzUipHZcyO2nmr5OOC3e92sWAza5RI!/photolist&t=5">
+                </div>
+                <div class="slide-indicator">1/3</div>
+            </div>
+
+            <!-- 商品信息容器 -->
+            <div class="product-info">
+                <!-- 价格展示 -->
+                <div class="priceBox">￥<span>29元</span></div>
+                <!-- 平台保障 -->
+                <div class="platformAssurance">退货包运费 | 不满意包退货运费，退换无忧</div>
+                <!-- 产品标题 -->
+                <div class="productTitle"><span class="brandNme">解忧小店</span>【耳机推荐】Remax有线音乐耳机
+                </div>
+                <!-- 辅助显示 -->
+                <ul class="auxiliaryDisplay">
+                    <li>承诺48小时内发货 | 超时必赔<span>></span></li>
+                    <li>假一赔十 | 解忧推荐<span>></span></li>
+                    <li>正品由中国人寿财险承保<span>></span></li>
+                </ul>
+            </div>
+
+            <!-- 店铺信息容器 -->
+            <div class="shopContainer">
+                <!-- 头像在左边 80px * 80px -->
+                <img class="shopHead"
+                    src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*Sb9p.Dr0xeuGkzk9uWibwp*Bg.euRLjJChjOKCRsCVW75bFGYIDoMqMtbz.QrqgVitW6oYspuytUjm2Sl3vXtuE!/mnull&bo=AAQABAAEAAQDByI!&rf=photolist&t=5">
+                <!-- 包裹店铺名和地址的容器 -->
+                <div class="shopInfo">
+                    <!-- 头像右边上 店铺名 -->
+                    <span class="shoptitle">解忧杂货店<span class="officialVersion">官方</span></span>
+                    <!-- 头像右边下 地址 -->
+                    <span class="shopAddress">佛山解忧网络责任有限公司</span>
+                </div>
+            </div>
+
+            <!-- 店铺辅助提示 -->
+            <div class="shopAssistantHintBox">
+                <!-- 左边 -->
+                <span class="shopAssistantHintLeft">店铺保障</span>
+                <!-- 右边 -->
+                <span class="shopAssistantHintRight">退货包运费 | 保证金 | 老字号店铺 >&nbsp;</span>
+            </div>
+
+            <!-- 详情图片 -->
+            <div class="detailImage">
+                <img src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*SYFpk7g2Iln16vdPsjUeO8J.OL.P8u0AbB.hXbsih2x4tcUSlgNH0zUlMKoO*ROCsh4tVaKkZWEQKJpUwzUud.A!/photolist&t=5">
+                <img src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*ScmPeFOcXHMRK2ql9Y5buhgtc1P2mxqtmvgkBTfvvkS6.IUo5tRgqJ24HlW.8MvFoi7o0pzgtvG18NMlrylDSjg!/photolist&t=5">
+                <img src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*ST8DXD3YNLj14Nay8l.8sK6FGf7ELJ5R3RiN1RgUXwJl8PxF2NVD3rDByDzsKMnxxb2Q8nHzAThPeSNAozLinVo!/photolist&t=5">
+                <img src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*SeDIMBuNgaqMekNkCMB1EPDh5otMPZWpX5SsEPPCcQh.6SG2HSZH5UNdkrDiwlXZvwTrQdYS8OZWr1uh91gC2so!/photolist&t=5">
+                <img src="http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0XZ3bW/LiySpxowE0yeWXwBdXN*SVMsf.*xh7pVFJ5hikPDIaUQWQCYE8jJ92L*5ETc6gv6rBKzZ0UcnW4scLF1uQRYb85Z*xpscHtS6wp3QUFavKA!/photolist&t=5">
+            </div>
+        </div>
+
+        <script>
+            // 禁用选中状态
+            document.addEventListener("selectstart", function (e) {
+                e.preventDefault();
+            })
+
+            // 禁用双击变大
+            document.addEventListener('touchstart', function (event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, { passive: false });
+            var lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                var now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+
+
+
+            // 图片顶部展示
+            class SlideGallery {
+                constructor(container) {
+                    this.container = container;
+                    this.track = container.querySelector('.slide-track');
+                    this.items = Array.from(container.querySelectorAll('.slide-item'));
+                    this.indicator = container.querySelector('.slide-indicator');
+                    this.currentIndex = 0;
+
+                    this.init();
+                }
+
+                init() {
+                    this.addEventListeners();
+                    this.updatePosition();
+                }
+
+                addEventListeners() {
+                    let startX = 0;
+                    let currentTranslate = 0;
+                    let isDragging = false;
+
+                    const handleStart = (e) => {
+                        isDragging = true;
+                        startX = this.getClientX(e);
+                        this.track.style.transition = 'none';
+                    };
+
+                    const handleMove = (e) => {
+                        if (!isDragging) return;
+                        const currentX = this.getClientX(e);
+                        const diffX = currentX - startX;
+                        this.track.style.transform = `translateX(${currentTranslate + diffX}px)`;
+                    };
+
+                    const handleEnd = (e) => {
+                        if (!isDragging) return;
+                        isDragging = false;
+
+                        const endX = this.getClientX(e);
+                        const diffX = endX - startX;
+                        const threshold = this.container.offsetWidth * 0.2;
+
+                        if (Math.abs(diffX) > threshold) {
+                            this.currentIndex += diffX > 0 ? -1 : 1;
+                            this.currentIndex = Math.max(0, Math.min(this.currentIndex, this.items.length - 1));
+                        }
+
+                        this.updatePosition();
+                        currentTranslate = -this.currentIndex * this.container.offsetWidth;
+                        this.track.style.transition = 'transform 0.3s ease';
+                    };
+
+                    // 事件绑定
+                    this.container.addEventListener('touchstart', handleStart);
+                    this.container.addEventListener('touchmove', handleMove);
+                    this.container.addEventListener('touchend', handleEnd);
+                    this.container.addEventListener('mousedown', handleStart);
+                    document.addEventListener('mousemove', handleMove);
+                    document.addEventListener('mouseup', handleEnd);
+                }
+
+                updatePosition() {
+                    const offset = -this.currentIndex * this.container.offsetWidth;
+                    this.track.style.transform = `translateX(${offset}px)`;
+                    this.indicator.textContent = `${this.currentIndex + 1}/${this.items.length}`;
+                }
+
+                getClientX(e) {
+                    return e.touches?.[0]?.clientX ?? e.changedTouches?.[0]?.clientX ?? e.clientX;
+                }
+            }
+
+            // 初始化
+            new SlideGallery(document.querySelector('.slide-container'));
+        </script>
+</body>
+
+</html>
