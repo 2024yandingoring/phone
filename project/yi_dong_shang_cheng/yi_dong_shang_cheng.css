@@ -1448,6 +1448,7 @@
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
     /* 输入框添加内边距和边框，使其更美观 */
     transition: border-color 0.3s ease;
 }
