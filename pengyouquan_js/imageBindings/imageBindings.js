@@ -12678,6 +12678,1194 @@ function rebindImageEvents() {
         });
     });
 
+    bindElement('.img_2025_4_22_1', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg1')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_2', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg2')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_3', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg3')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_4', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg4')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_5', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg5')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_6', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg6')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_7', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg7')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_8', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg8')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2025_4_22_9', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2, .tongYongNovImg3, .tongYongNovImg4, .tongYongNovImg5, .tongYongNovImg6, .tongYongNovImg7, .tongYongNovImg8, .tongYongNovImg9');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SUibQIDTtKx5V4F*e.sRwW6bkiqD0*dsDxvgV6nvrZC8erZ05QS0RZNyNdz8TYTbyIBDPi918SOGI.PCQYJ*NBk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SfT10iwaDLHy4MJ8H3osCDKCEEGBdRkGrnkGIf9sGzu0GNMzUgXGklCSUY3DKWfEQE*lAVtB4gLWNn2gL3oxJ0c!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg3')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*Se4ot.g.W*d3gHwsooExc8WdcrCUvDB8SRsk3HfWZB208g8YUPOF*3PIEbcsG**6Gzni*Zo5AxdnGxhVLVigz7s!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg4')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SaWi9yOqOvri3Bh7a9QMwQfYLyTU5AH02q2iWsPZUjcsK2SrKsY29BnI5n8kFEwmSlie9DzmyWPrXbpfvthUzqk!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg5')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SctDzyHs3Z3FDBEOz2FOSy8MVbvaoLn7*bcqRT00XH8FbdLg.9*dYDf5UVVRHxUUa6abJkBZrdTYEjq2hDDCtvE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg6')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SS7msnq9KQLxj3C00ABsJq2HEf*TjPHL*qExSa5.5D6oaCEITTScQbNGDNfRn2wGCKIuWgXUIFjg2AecKOt72OM!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg7')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SXzERF63nU60DAOFki04z.NVtKogxxfBisdt*936dTqakjm7zm3x6.4DpvfYzYoemgdPFnoIP6R3KISZnkXmGHU!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg8')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVqcr7J*0ae8jl7e1AFxKS9TnHPgZhsYIanezcSBuiNakjjhDD310ix*pXI7tyVRcCgp*9z01IvlIvUG5sxzYhA!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg9')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa4JuwKw/LiySpxowE0yeWXwBdXN*SVYKzb*g3GEtjm82WU7PZ8kfU3bcYbXy56rkbxA2evFnIoIwqbAwLMzv8JgKbZssz*44WCJdHkZkmwclg64oFB0!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5',
+            'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 9; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg9')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
 
     // bindElement('.img_XC_N8_999', () => {
     // });
