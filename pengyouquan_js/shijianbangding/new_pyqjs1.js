@@ -131,6 +131,37 @@ document.body.addEventListener('click', (e) => {
 
 
 // 示例：手动添加数据
+// 2025年4月22日
+addItem({
+    id: '言定',
+    //相册N10
+    date: '2025年4月22日',
+    content: '时间过的真快，没想到我姐也要嫁人了，在我亲戚的帮助下，我也去了我姐夫家，不然我一个人真的不敢过去，可能是太陌生了，不知道我姐是啥心情，毕竟后半辈子就要在我姐夫家过一辈子了，离开了熟系的家，最为熟系的安全区突然要换地方了，我想大部分的女孩子心里落差应该都是非常大的，不舍？异常难受？想说的话准备出来又咽回去，想流出来的泪又怕···不敢流，吃完席，看完热闹的婚礼，不知不觉太阳已经下山了，我也准备回家了，临别的时候我去给我姐打了声招呼“姐，我先回去了喔”“嗯，好”，也给我姐夫和我姐夫的家人“走了喔，有空过来玩”，我觉得我应该做的流程我尽力的去做了，我刚上回家的车，我姐就跑了出来，挥了挥手，我已经不敢看她的表情了，因为我的眼泪已经咽回去了，但我还是大声喊“拜拜”同样挥了挥手。以后估计也不会有人在我打游戏的时候强行拉我去干活了，也不会看见我在家就让我去跑腿，去端水，去扫地，害，我应该喜欢安静的环境的呀，这下子不会总有人在我耳旁“弟、弟、弟”的吵着了，为啥我会有一股落寞感呢，也许习惯了耳旁有人的吵闹反而是日常，这热闹的婚礼到了要收拾的时间段怪“可怕的”，好安静，我独自打扫着楼上扎堆人群留下来的垃圾，好安静，好安静，看着热闹人群中出嫁的老姐，心里怪不舍的，但也替她觉得幸福，很多亲朋好友都见证了她的爱情结果，都替她感到高兴。回想起：小时候，我姐带我去田里玩水，那时候正是台风过后，田里是可以游泳的，我那时候个子还很矮，身高估计也只能抱紧我姐的大腿，就在我姐玩腻了上去了之后，我突然脚滑了，差点溺水躺板板，还好可能天生自带会游泳的天赋？我随后也上去了，看到我姐那发白的表情，不断的喊着“弟，快上来啊”可能从小就学会锻炼识别情绪的能力，看出来她的不安，我半开玩笑的说“水下有好多鱼啊”，但依旧没能安抚到她那发白的表情，回家的路上我们拉拉勾勾“这件事只能我们知道，不许跟爸妈说”，经历过这件事后，我姐再也不会带我出去玩了。',
+    // redText 自定义 删除则不显示红字段 redText: '#自定义红字段<br>',
+    // redText: '#很久很久的我们(2016-至今)<br>',
+    // fourGridClass 自定义 fourGrid 类名 ==> singleCell(单格图片)、 fourGrid(4宫格)、nineGrid(9宫格)
+    fourGridClass: 'nineGrid',
+    // imgs 自定义 singleCellImg (单格图片)、 three_box_box_img(4宫格)、 nineGridImg(9宫格)
+    // 单格图片 图片像素150*200 + 4宫格图片 图片像素190*190 + 九宫格图片 图片像素190*190 
+    // { class: 'singleCellImg img_2022_5_23_1', src: './favicon.png' }
+    imgs: [
+        { class: 'nineGridImg img_2025_4_22_1', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SX2.*jW..d0niV*j2DcEQdco*IklhPq*tyBYoC.kZ5elWL7xevdkX0KOuUJhq.lUTcsd3iLkqpMzviRbi1pUTOw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_2', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SY0**2bzeyfXleVy2SEiglkAyo0u07ri9PQuKZJj82KzefYyN6BA2koLxnMCSQkRUxh8oW4f6fmEZSPyV7IF7wc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_3', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SQXeorS0EoY9vQg2s*6fFEe.JPJeK57tntYBxQTMAbUQgHbv9zYWIHGjGP5FOPeOZENP0TiYpf*ASHdzqkza1yw!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_4', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*Seas8eNoOgj5Zo0Q.2sgsVGACK4qYshgdE15ZqgUVS28wtHMjU7QMWMiY71VFHGtv0ZI9G6bFksNyRS5pl3b*ls!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_5', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYbte3B0qPxOVPnc7yrw9OCa*VuE2ZbhSxSoZ.q9MfmJrd.y8heolwDT4M39fxlA.TYknBuNBolHRosTsIcrGXE!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_6', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVud8W9jArQGFMwq4wfI66.bkj60VZGi17LbWvbAby8hMyJ429gFNeLS.3L9zdVq4qy7j3D5TexnM8dYrRue0.Y!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_7', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SXRYckG7Xw.kReMb6etBPW*GUx5mFdE6Qmhh4SHfo9LqzqAYCxS2E*918TaZK0Z8DJQ2rXOGkpTINwqGy*6Oj.s!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_8', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SV7nbNocFYoFaVL0eQgVS7AR0mhdsAnppfWYVLz*6u4oWsFhO1MM0MllgbGJhiUB9h.yhi8kcxnlbZ1PlJ9eFY0!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' },
+        { class: 'nineGridImg img_2025_4_22_9', src: 'http://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SSQ3QHBFN9IXIA*b3sfmu6VqxxWNB8i.5D0Jk2kM8cFdedLlg0qNNnLwmhzYztEEkbGBxaNKZ*CpoQcR5i8SqMc!/mnull&bo=vgC.AL4AvgADByI!&rf=photolist&t=5' }
+    ],
+    // 长文本内容隐藏和显示按钮 （显示==> expandText: '展开内容',showExpand: true）
+    //(隐藏==>showExpand: false)
+    expandText: '展开内容',
+    showExpand: true
+    // showExpand: false
+});
+
 // 2025年2月16日
 addItem({
     id: '言定',
