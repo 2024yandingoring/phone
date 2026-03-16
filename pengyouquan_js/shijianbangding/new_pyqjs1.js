@@ -314,29 +314,6 @@ addItem({
     // showExpand: false
 });
 
-// 2022年3月4日
-addItem({
-    id: '言定',
-    //相册N10
-    date: '2022年3月4日',
-    content: '纵有疾风起，人生不言弃。查了下资料貌似出自法国诗人瓦雷里《海滨墓园》 （Christina Rossetti） 的一句诗，原句是Le vent se lève, il faut tenter de vivre.很感谢这位同事送来的励志语， 我明白我自身还有很多不足，日后定会更加努力，路漫漫其修远兮。',
-    // redText 自定义 删除则不显示红字段 redText: '#自定义红字段<br>',
-    // redText: '#很久很久的我们(2016-至今)<br>',
-    // fourGridClass 自定义 fourGrid 类名 ==> singleCell(单格图片)、fourGrid(4宫格)、nineGrid(9宫格)
-    fourGridClass: 'singleCell',
-    // imgs 自定义 singleCellImg (单格图片)、three_box_box_img(4宫格)、 nineGridImg(9宫格)
-    // 单格图片 图片像素150*200 + 4宫格图片 图片像素190*190 + 九宫格图片 图片像素190*190 
-    // { class: 'singleCellImg img_2022_5_23_1', src: './favicon.png' }
-    imgs: [
-        { class: 'singleCellImg img_2022_3_4', src: 'https://m.qpic.cn/psc?/V50ZViJb1tHZiA47k99q0gKdaa1J4Zp2/bqQfVz5yrrGYSXMvKr.cqQCCD8qBqLWoVkRex6rAFKnOW3nKoYiO7v2eo38V*1aEXMfzid3iYmdsHOc5kjpSqbsahAhNvnlN0kI6*TPGaw4!/mnull&bo=QAZVCEAGVQgBByA!&rf=photolist&t=5' }
-    ],
-    // 长文本内容隐藏和显示按钮 （显示==> expandText: '展开内容',showExpand: true）
-    //(隐藏==>showExpand: false)
-    expandText: '展开内容',
-    showExpand: true
-    // showExpand: false
-});
-
 // 相册N1
 addItem({
     id: '言定',
