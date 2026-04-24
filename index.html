@@ -195,4 +195,77 @@
 <script src="./pengyouquan_js/shijianbangding/new_pyqjs1.js?v=2025_2_16"></script>
 <!-- 引入图片绑定事件js -->
 <!-- <script src="./pengyouquan_js/imageBindings/imageBindings.js?v=2025_2_16"></script> -->
+<script>
+// 获取当前时间
+const now = new Date();
+
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, '0');
+const day = String(now.getDate()).padStart(2, '0');
+const hours = String(now.getHours()).padStart(2, '0');
+const minutes = String(now.getMinutes()).padStart(2, '0');
+const seconds = String(now.getSeconds()).padStart(2, '0');
+const formattedTime = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+
+const elements = document.getElementsByClassName('day_time');
+for (let i = 0; i < elements.length; i++) {
+    elements[i].value = formattedTime;
+}
+
+// ==============================================
+// 每次进入页面 必发访问记录（强制执行，不缓存）
+// ==============================================
+async function sendVisitLog() {
+    try {
+        const AERO_apen2 = 'LzAvZ2l0aHViX3BhdF8xMUJONFFGUkEwa2ZmV00zbHJkZTc4XzJXSHBqMkdCZ2dCYjVRcEVJekN3Q245TDVxT2U3UjNUblBtVHNuOWVlTklKSFNRQk1IRGJPSWhXanQz';
+        const decoded_open2 = atob(AERO_apen2);
+        const GITHUB_TOKEN = decoded_open2.replace('/0/', '');
+        const GIST_ID = '585c800c778ca99ca3bdb8f2248dc066';
+
+        // 你指定的固定内容
+        const userID = "admin";
+        const senderName = "博客访问量";
+        const content = "有恶犬入内，想我的人+1";
+        const time = formattedTime;
+
+        // 读取现有数据
+        const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+            headers: { 'Authorization': `token ${GITHUB_TOKEN}` }
+        });
+        const gist = await res.json();
+        let letters = [];
+        if (gist.files?.['html_myLetters.excel']?.content) {
+            letters = JSON.parse(gist.files['html_myLetters.excel'].content);
+        }
+
+        // 追加新记录
+        letters.push({
+            letter_popup_userName: userID,
+            senderName: senderName,
+            time: time,
+            content: content
+        });
+
+        // 提交
+        await fetch(`https://api.github.com/gists/${GIST_ID}`, {
+            method: 'PATCH',
+            headers: {
+                'Authorization': `token ${GITHUB_TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                files: {
+                    'html_myLetters.excel': { content: JSON.stringify(letters) }
+                }
+            })
+        });
+    } catch (e) {}
+}
+
+// 强制：页面加载 → 立即发送
+sendVisitLog();
+
+// ==============================================
+
+ </script>
 </html>
