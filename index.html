@@ -15,7 +15,13 @@
 
     <meta name="referrer" content="always">
 
-    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="referrer" content="origin-when-cross-origin">
+    <style>
+img[src*="qpic.cn"], img[src*="qzone.qq.com"] {
+  referrer-policy: no-referrer;
+}
+</style>
     <title>欢迎回来-welcome back</title>
 
     <!-- 引入网页头部logo -->
