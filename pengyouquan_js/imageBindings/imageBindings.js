@@ -13867,6 +13867,145 @@ function rebindImageEvents() {
     });
 
 
+    bindElement('.img_2026_5_16_1', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYxeEzku8rg2QJ4*A3cPqh8eRsU0UEQqKZZzJUM8weax2D243f9X8kZUjQb8sTCqZEkItkOCHaLrqvJmzec8wxc!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYxeEzku8rg2QJ4*A3cPqh8eRsU0UEQqKZZzJUM8weax2D243f9X8kZUjQb8sTCqZEkItkOCHaLrqvJmzec8wxc!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVu*zpUxNJFLyE2ZkO2CprduDa4e7cFzYYmixR0TTjhTJbEd7x9vRG3KzRBYC.dSxbz*7uOL.K4qSsOjE65DskE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYxeEzku8rg2QJ4*A3cPqh8eRsU0UEQqKZZzJUM8weax2D243f9X8kZUjQb8sTCqZEkItkOCHaLrqvJmzec8wxc!/mnull&bo=OARgCTgEYAkBByA!&rf=photolist&t=5',
+            'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVu*zpUxNJFLyE2ZkO2CprduDa4e7cFzYYmixR0TTjhTJbEd7x9vRG3KzRBYC.dSxbz*7uOL.K4qSsOjE65DskE!/mnull&bo=OARgCTgEYAkBByA!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 2; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg1')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+    bindElement('.img_2026_2_16_2', () => {
+        fourBox.style.display = 'flex';
+        fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVu*zpUxNJFLyE2ZkO2CprduDa4e7cFzYYmixR0TTjhTJbEd7x9vRG3KzRBYC.dSxbz*7uOL.K4qSsOjE65DskE!/photolist&t=5';
+
+        // 在初始化时绑定事件委托（只需要执行一次）
+        bottomNavigation.addEventListener('click', function (e) {
+            const target = e.target.closest('.tongYongNovImg1, .tongYongNovImg2');
+            if (!target) return;
+
+            // 移除所有同类元素的边框
+            document.querySelectorAll('.bottomNavigation img').forEach(img => {
+                img.style.outline = '';
+            });
+
+            // 添加当前点击元素的边框
+            target.style.outline = '2px solid #1296db';
+
+            // 根据类名设置不同的大图
+            if (target.classList.contains('tongYongNovImg1')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYxeEzku8rg2QJ4*A3cPqh8eRsU0UEQqKZZzJUM8weax2D243f9X8kZUjQb8sTCqZEkItkOCHaLrqvJmzec8wxc!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            } else if (target.classList.contains('tongYongNovImg2')) {
+                fourBoxSuimg.src = '';
+                fourBoxSuimg.src = 'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVu*zpUxNJFLyE2ZkO2CprduDa4e7cFzYYmixR0TTjhTJbEd7x9vRG3KzRBYC.dSxbz*7uOL.K4qSsOjE65DskE!/photolist&t=5';
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+            // 添加其他类名的处理...
+        });
+
+        // 设置导航小图
+        const imgSrcs = [
+            'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SYxeEzku8rg2QJ4*A3cPqh8eRsU0UEQqKZZzJUM8weax2D243f9X8kZUjQb8sTCqZEkItkOCHaLrqvJmzec8wxc!/mnull&bo=OARgCTgEYAkBByA!&rf=photolist&t=5',
+            'https://photogzmaz.photo.store.qq.com/psc?/V50ZViJb1tHZiA47k99q0gKdaa0FSnRP/LiySpxowE0yeWXwBdXN*SVu*zpUxNJFLyE2ZkO2CprduDa4e7cFzYYmixR0TTjhTJbEd7x9vRG3KzRBYC.dSxbz*7uOL.K4qSsOjE65DskE!/mnull&bo=OARgCTgEYAkBByA!&rf=photolist&t=5'
+        ];
+
+        // 只显示前7个导航小图
+        const maxVisibleCount = 2; // 设置最大显示数量
+        document.querySelectorAll('.bottomNavigation img').forEach((navImg, index) => {
+            if (index < maxVisibleCount) {
+                navImg.style.display = 'inline-block';
+                navImg.src = imgSrcs[index % imgSrcs.length];
+
+                // 根据类名设置默认轮廓颜色
+                if (navImg.classList.contains('tongYongNovImg2')) {
+                    navImg.style.outline = '2px solid #1296db'; // 默认轮廓颜色
+                    // 将该图片滚动到可见位置
+                    navImg.scrollIntoView({
+                        behavior: 'smooth', // 平滑滚动
+                        block: 'nearest', // 垂直方向上最近位置
+                        inline: 'center' // 水平方向上居中
+                    });
+                } else {
+                    navImg.style.outline = ''; // 其他小图无轮廓
+                }
+            } else {
+                navImg.style.display = 'none'; // 隐藏超出数量的元素
+            }
+        });
+    });
+
+
     // bindElement('.img_XC_N8_999', () => {
     // });
 
